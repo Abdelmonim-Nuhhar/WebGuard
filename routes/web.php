@@ -20,6 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/vulnerabilities', [VulnerabilityController::class, 'index']);
+Route::get('/vulnerabilities/{id}', [VulnerabilityController::class, 'show']);
 
 
 Route::get('/dashboard', function () {
