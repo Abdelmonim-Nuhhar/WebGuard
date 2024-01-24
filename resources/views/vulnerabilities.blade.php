@@ -19,7 +19,7 @@
                     <td class="border">{{ $vulnerability->name }}</td>
                     <td class="border">{{ $vulnerability->severity }}</td>
                     <td class="border">{{"       "}}</td>
-                    <td class="border"> <button value="{{ $vulnerability->id }}" class="select-product">Select</button> </td>
+                    <td class="border p-2"> <button value="{{ $vulnerability->id }}" class="select-product bg-blue-500 text-white p-3 pl-10 pr-10 rounded">Select</button> </td>
                 </tr>
             </table>
         </div>
