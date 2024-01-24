@@ -1,11 +1,11 @@
-<div class="grid grid-cols-4 bg-yellow-500 min-h-screen p-4">
+<div class="grid grid-cols-1 bg-yellow-500 min-h-screen p-4">
 
     @foreach($vulnerabilities as $vulnerability)
 
         <div class="mb-4">
             <h2 class="text-white bg-blue-500 p-2">Vulnerability {{ $vulnerability->id }}</h2>
 
-            <table class="w-full bg-green p-2">
+            <table class="w-full bg-green-100 p-2">
                 <tr>
                     <th class="border">Vulnerability ID</th>
                     <th class="border">Vulnerability Name</th>
@@ -26,6 +26,20 @@
 
     @endforeach
 
+    
+
+   
+
 </div>
 
 
+<x-vulnerability-card >
+       <x-section-container>
+        <strong>Hello there</strong> this is section 1
+       </x-section-container>
+
+       <x-section-container>
+        <strong>Hello there</strong> this is section 2
+       </x-section-container>
+     
+</x-vulnerability-card>
