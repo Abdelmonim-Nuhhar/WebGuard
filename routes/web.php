@@ -19,7 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/vulnerabilities', [VulnerabilityController::class, 'index']);
+Route::get('/vulnerabilities', [VulnerabilityController::class, 'index'])-> name('index');
+Route::get('/about', [VulnerabilityController::class, 'about'])-> name('about');
 Route::get('/vulnerabilities/{id}', [VulnerabilityController::class, 'show']);
 
 
