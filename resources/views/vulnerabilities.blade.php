@@ -1,38 +1,93 @@
-<div class="grid grid-cols-1 bg-yellow-500 min-h-screen p-4">
+@extends('layouts.new-app')
 
-    @foreach($vulnerabilities as $vulnerability)
+@section('content')
+<section class="py-12 bg-white text-center  mb-3 rounded-2xl ">
+    <h2 class="text-4xl font-bold text-blue-800 mb-6">Welcome to Web Vulnerabilities Learning Hub</h2>
+    <p class="text-lg text-gray-600 mb-8">
+        Explore the fascinating world of web vulnerabilities and enhance your understanding of web security.
+        Click on any vulnerability below to learn more about it and discover how to protect against potential threats.
+    </p>
+</section>
 
-        <div class="mb-4">
-            <h2 class="text-white bg-blue-500 p-2">Vulnerability {{ $vulnerability->id }}</h2>
 
-            <table class="w-full bg-green-100 p-2">
-                <tr>
-                    <th class="border">Vulnerability ID</th>
-                    <th class="border">Vulnerability Name</th>
-                    <th class="border">Severity</th>
-                    <td class="border">{{"            "}}</td>
-                    <th class="border">Select</th>
-                </tr>
+<!-- vulnerabilities lists Section Starts -->
+<div class="flex mb-2">
+    <div class="w-full sm:w-1/4">
+        <div class="bg-white hover:bg-gray-200 text-gray-800 p-3 rounded-2xl shadow-md text-center text-gray-800 p-5 font-semibold text-1xl font-mono">
+        The Vulnerability Name
+        </div>
+    </div>
 
-                <tr>
-                    <td class="border">{{ $vulnerability->id }}</td>
-                    <td class="border">{{ $vulnerability->name }}</td>
-                    <td class="border">{{ $vulnerability->severity }}</td>
-                    <td class="border">{{"       "}}</td>
-                    <td class="border p-2"> <button value="{{ $vulnerability->id }}" class="select-product bg-blue-500 text-white p-3 pl-10 pr-10 rounded">Select</button> </td>
-                </tr>
-            </table>
+    <div class="w-full sm:w-3/4">
+        <div class="bg-white hover:bg-gray-200 text-gray-800 ml-2 p-3 rounded-2xl shadow-md text-center text-gray-800 p-5 font-semibold text-1xl font-mono">
+        The Vulnerability Description
+        </div>
+    </div>
+</div>
+
+<section class="contact bg-white py-4 rounded-2xl">
+@foreach($vulnerabilities as $vulnerability)
+
+
+    <div class="flex">
+        <div class="m-6 w-full sm:w-1/4 p-3 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl bg-red-300 border-blue-300">
+            <a href="{{ route('index') . '/' . $vulnerability->id }}" class="text-gray-800 p-5 font-semibold text-1xl font-mono underline">
+            {{ $vulnerability->name }}
+            </a>
         </div>
 
-    @endforeach
+        <div class="m-8 m-5w-full sm:w-3/4">
+            <div class="bg-blue-100 hover:bg-blue-200 text-gray-800 p-6 rounded-2xl shadow-md text-center text-1xl">
+                <p>
+                {{ $vulnerability->description }}
+                </p>
+            </div>
+        </div>
+
+    </div>
 
     
 
-   
+@endforeach
 
+<div class="flex">
+    <div class="w-full sm:w-1/4">
+        <div class="bg-green-500 hover:bg-green-400 text-white p-6 rounded shadow-md text-center">
+            1
+        </div>
+    </div>
+
+    <div class="w-full sm:w-3/4">
+        <div class="bg-green-500 hover:bg-green-400 text-white p-6 rounded shadow-md text-center">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+    </div>
+</div>
+
+    
+</section>
+
+<div class="flex">
+<div class="w-full sm:w-1/4">
+    <div class="bg-green-500 hover:bg-green-400 text-white p-6 rounded shadow-md text-center">
+        1
+    </div>
+</div>
+
+<div class="w-full sm:w-3/4">
+    <div class="bg-green-500 hover:bg-green-400 text-white p-6 rounded shadow-md text-center">
+        2
+    </div>
+</div>
 </div>
 
 
+
+<!-- Vulnerabilities lists Section Ends -->
+
+<!-- This are components   will be use later  -->
 <x-vulnerability-card >
        <x-section-container>
         <strong>Hello there</strong> this is section 1
@@ -43,3 +98,11 @@
        </x-section-container>
      
 </x-vulnerability-card>
+@endsection
+
+
+   
+
+
+
+

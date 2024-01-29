@@ -4,13 +4,13 @@
 
 <!-- Contact Section Starts -->
 
-<section class="contact bg-gray-100 py-12">
+<section class="contact bg-green-100 py-12 rounded-3xl">
    <h1 class="text-3xl font-bold mb-8 text-center">Get in Touch</h1>
 
    <div class="flex flex-wrap justify-around max-w-6xl mx-auto">
 
       <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-8">
-         <div class="bg-blue-400 text-white p-6 rounded shadow-md text-center mr-4">
+         <div class="bg-blue-400 hover:bg-blue-300 text-white p-6 rounded-3xl shadow-md text-center mr-4">
             <i class="fas fa-clock text-4xl mb-2 "></i>
             <h3 class="text-lg font-semibold mb-2">Opening Hours</h3>
             <p>00:07 am to 00:06 pm</p>
@@ -19,7 +19,7 @@
       </div>
 
       <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-8">
-         <div class="bg-green-500 text-white p-6 rounded shadow-md text-center mr-4">
+         <div class="bg-green-500 hover:bg-green-400 text-white p-6 rounded-3xl shadow-md text-center mr-4">
             <i class="fas fa-phone text-4xl mb-2"></i>
             <h3 class="text-lg font-semibold mb-2">Phone</h3>
             <p>+44 113 657 89</p>
@@ -28,7 +28,7 @@
       </div>
 
       <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-8">
-         <div class="bg-yellow-500 text-white p-6 rounded shadow-md text-center mr-4">
+         <div class="bg-yellow-500 hover:bg-yellow-400 text-white p-6 rounded-3xl shadow-md text-center mr-4">
             <i class="fas fa-envelope text-4xl mb-2"></i>
             <h3 class="text-lg font-semibold mb-2">Email</h3>
             <p>mo-hassan@supervisor.co.uk</p>
@@ -37,7 +37,7 @@
       </div>
 
       <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-8">
-         <div class="bg-indigo-500 text-white p-6 rounded shadow-md text-center">
+         <div class="bg-indigo-500 hover:bg-indigo-400 text-white p-6 rounded-3xl shadow-md text-center">
             <i class="fas fa-map text-4xl mb-2"></i>
             <h3 class="text-lg font-semibold mb-2">Address</h3>
             <p>Leeds Beckett University, UK</p>
