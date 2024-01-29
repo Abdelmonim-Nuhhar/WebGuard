@@ -15,7 +15,7 @@
     <header class="justify-flex border-bottom-double border-2 mb-0">
         <div class="flex flex-col items-start border-2 rounded-lg m-2">
             <img src="{{asset('images/logo.png')}}" alt="logo" class="w-full h-40 object-cover"> {{-- Updated with object-cover --}}
-            <h2 class="font-bold text-lg self-center">web Guard</h2>
+            <h2 class="font-bold text-lg self-center">Web Guard</h2>
         </div>
     </header>
 
@@ -38,7 +38,7 @@
     {{-- Footer Section --}}
     <footer class="bg-gray-800 text-white text-center p-4">
         {{-- Include your footer content here --}}
-        &copy; {{ date('Y') }} Your App Name. All rights reserved.
+        &copy; {{ date('Y') }} Web Guard Vulnerabilities. All rights reserved.
     </footer>
 
 </body>

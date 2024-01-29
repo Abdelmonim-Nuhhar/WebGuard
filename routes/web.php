@@ -21,6 +21,7 @@ Route::get('/', function () {
 
 Route::get('/vulnerabilities', [VulnerabilityController::class, 'index'])-> name('index');
 Route::get('/about', [VulnerabilityController::class, 'about'])-> name('about');
+Route::get('/resources', [VulnerabilityController::class, 'resources'])-> name('resources');
 Route::get('/vulnerabilities/{id}', [VulnerabilityController::class, 'show']);
 
 
