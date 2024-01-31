@@ -31,9 +31,9 @@
 
     <!-- Main Content -->
     <main class="container mx-auto mt-4 p-4">
-        
-
-
+    <div class="flex">
+        <div class="w-full sm:w-2/3 hover:bg-green-200 text-white p-2 rounded-2xl shadow-md text-center mr-2">
+            
         <section class="mb-8">
             <h2 class="text-gray-700 p-2 font-semibold text-2xl font-mono">Features </h2>
             <div class="flex flex-wrap sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -52,7 +52,24 @@
                     </div>
                 </div>
             </div>
+             
         </section>
+            
+    </div>
+
+        <div class="w-full sm:w-1/3 rounded-3xl overflow-hidden">
+            
+        <img src="{{asset('images/home2.jpg')}}" alt="logo" class="w-full h-full object-cover rounded-3xl">
+            
+        </div>
+    </div>
+
+        
+       
+
+
+    
+
 
         <section class="mb-8">
             <h2 class="text-gray-700 p-2 font-semibold text-2xl font-mono font-semibold mb-2">Why Register with Web Guard?</h2>
