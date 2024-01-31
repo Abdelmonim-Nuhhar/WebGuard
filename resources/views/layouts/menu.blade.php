@@ -1,6 +1,6 @@
 <nav class="flex justify-start">
     <div class="m-5 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-md bg-red-200 border-blue-300">
-        <a href="{{ route('index') }}" class="text-gray-700 p-5 font-semibold text-3xl font-mono">
+        <a href="{{ url('/') }}" class="text-gray-700 p-5 font-semibold text-3xl font-mono">
             Home
         </a>
     </div>
