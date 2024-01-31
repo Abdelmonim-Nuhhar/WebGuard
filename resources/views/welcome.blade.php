@@ -24,7 +24,7 @@
             <h1 class="text-4xl font-semibold text-gray-500 p-4 font-semibold text-3xl font-mono">Welcome to Web Guard</h1>
             <p class="text-gray-800 leading-loose">
                 Enhance your knowledge of web application security with Web Guard. <a href="{{ route('register') }}" class="bg-blue-300 text-red-500 font-bold py-2 p-5 rounded-full mt-4 inline-block hover:bg-gray-200 transition duration-300 underline">Register</a>
- now to access exclusive Learning Hub and resources.
+                 now to access exclusive Learning Hub and resources.
             </p>
         </div>
     </header>

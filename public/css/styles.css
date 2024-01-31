@@ -1,0 +1,10 @@
+.text-link {
+    color: #3498db; /* Default link color */
+    @apply text-base; /* Default font size, adjust as needed */
+    transition: color 0.3s, font-size 0.3s; /* Smooth transition effect */
+}
+
+.text-link:hover {
+    color: #4de73c; /* Change color on hover */
+    @apply text-lg; /* Increase font size on hover, adjust as needed */
+}
