@@ -19,48 +19,67 @@
 
 @section('content')
     <!-- Header -->
-    <header class="bg-blue-500 text-white p-4">
+    <header class="bg-gradient-to-r from-blue-300 via-blue-100 to-blue-300 text-white p-4 rounded-3xl">
         <div class="container mx-auto">
-            <h1 class="text-2xl font-semibold">Web Guard</h1>
+            <h1 class="text-4xl font-semibold text-gray-500 p-4 font-semibold text-3xl font-mono">Welcome to Web Guard</h1>
+            <p class="text-gray-800 leading-loose">
+                Enhance your knowledge of web application security with Web Guard. <a href="{{ route('register') }}" class="bg-blue-300 text-red-500 font-bold py-2 p-5 rounded-full mt-4 inline-block hover:bg-gray-200 transition duration-300 underline">Register</a>
+ now to access exclusive Learning Hub and resources.
+            </p>
         </div>
     </header>
 
     <!-- Main Content -->
     <main class="container mx-auto mt-4 p-4">
-        <section class="mb-8">
-            <h2 class="text-3xl font-bold mb-4">Welcome to Web Guard</h2>
-            <p class="text-gray-800">
-                Explore our educational resources to enhance your knowledge of web application security.
-            </p>
-        </section>
+        
+
 
         <section class="mb-8">
-            <h2 class="text-2xl font-bold mb-4">Featured Course</h2>
-            <div class="flex flex-between sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <h2 class="text-gray-700 p-2 font-semibold text-2xl font-mono">Features </h2>
+            <div class="flex flex-wrap sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <!-- Featured Course Card -->
-                <div class="bg-white p-4 rounded shadow-md">
-                    <h3 class="text-lg font-semibold mb-2">Web Vulnerabilities Learning Hub</h3>
-                    <p class="text-gray-600">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-gray-700 p-2 font-semibold text-2xl font-mono font-semibold mb-2">Web Vulnerabilities Learning Hub</h3>
+                    <p class="text-gray-700">
                         Educate web developers about common web vulnerabilities to build a secure website.
                     </p>
-                    <a href="#" class="text-blue-500 mt-2 inline-block" onclick="expandDescription()">Learn More</a>
-                    <div id="expandedDescription" class="hidden mt-2">
-                        <p class="text-gray-600">
+                    <a href="#" id="learnMoreLink" class="text-blue-500 mt-4 inline-block" onclick="toggleDescription()">Learn More</a>
+                    <div id="expandedDescription" class="hidden mt-4">
+                        <p class="text-gray-700">
                             This course covers a wide range of web vulnerabilities, including SQL injection, cross-site scripting (XSS), and more. Gain hands-on experience and practical skills to secure your web applications.
                         </p>
+                        <a href="#" id="viewLessLink" class="text-blue-500 mt-4 inline-block" onclick="toggleDescription()">View Less</a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="mb-8">
+            <h2 class="text-gray-700 p-2 font-semibold text-2xl font-mono font-semibold mb-2">Why Register with Web Guard?</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+            <ul class="list-disc pl-6 text-gray-800 leading-loose">
+                <li>Unlock the full potential of Web Guard by registering for an account.</li>
+                <li>Access to our Learning Hub with hands-on exercises on common web vulnerabilities.</li>
+                <li>Exclusive educational resources to help you build a secure website.</li>
+                <li>Engage with a community of like-minded web developers and security enthusiasts.</li>
+                <li>Stay updated with the latest trends and best practices in web application security.</li>
+            </ul>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-gray-700 p-2 font-semibold text-2xl font-mono font-semibold mb-2">Ready to Get Started?</h2>
+                <p class="text-gray-800 leading-loose">
+                    Register now and dive into the world of web application security. Join a community passionate about building and securing the web.
+                </p>
+                <a href="{{ route('register') }}" class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-full mt-4 inline-block hover:bg-blue-600 transition duration-300">Get Started</a>
+            
+            </div>
+        </section>
     </main>
 
-   
+    <!-- JavaScript to toggle description and scroll -->
+    <script src="{{ asset('js/jsFile.js') }}"></script>
 
-    <!-- JavaScript to toggle description -->
-    <script>
-        function expandDescription() {
-            var expandedDescription = document.getElementById('expandedDescription');
-            expandedDescription.classList.toggle('hidden');
-        }
-    </script>
 @endsection
