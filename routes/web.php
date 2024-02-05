@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [VulnerabilityController::class, 'home'])-> name('home');
 Route::get('/vulnerabilities', [VulnerabilityController::class, 'index'])-> name('index');
+Route::get('/create', [VulnerabilityController::class, 'create'])-> middleware('can:create, App\Models\Vulnerability')-> name('create');
+
 Route::get('/about', [VulnerabilityController::class, 'about'])-> name('about');
 Route::get('/resources', [VulnerabilityController::class, 'resources'])-> name('resources');
 Route::get('/contact', [VulnerabilityController::class, 'contact'])-> name('contact');
