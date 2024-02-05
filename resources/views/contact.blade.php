@@ -3,6 +3,7 @@
 @section('content')
 
 <!-- Contact Section Starts -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
 <section class="contact bg-green-100 py-12 rounded-3xl">
    <h1 class="text-3xl font-bold mb-8 text-center">Get in Touch</h1>
@@ -58,13 +59,28 @@
                <input type="email" placeholder="Email" class="w-full mb-4 p-2 rounded border">
                <input type="number" placeholder="Phone" class="w-full mb-4 p-2 rounded border">
                <textarea name="" class="w-full mb-4 p-2 rounded border" placeholder="Message" id="" cols="30" rows="5"></textarea>
-               <input type="submit" value="Send Message" class="bg-blue-600 text-white py-2 px-4 rounded cursor-pointer hover:bg-blue-800">
+               <input type="submit" value="Send Message" id="test" class="bg-blue-600 text-white py-2 px-4 rounded cursor-pointer hover:bg-blue-800">
             </form>
          </div>
       </div>
 
    </div>
 </section>
+
+<!--script>
+   test.addEventListener("mouseover", setDark);
+   test.addEventListener("mouseout", setLight); 
+   function setDark() 
+      { 
+      document.body.style.background = "black"; 
+      test.style.color = "purple"; 
+      } 
+   function setLight() 
+      {
+          document.body.style.background = "white"; 
+          test.style.color = "black"; 
+          }
+</script-->
 
 <!-- Contact Section Ends -->
 
@@ -87,14 +103,27 @@
 <section class="logo-container bg-white py-12">
    <div class="swiper logo-slider">
       <div class="swiper-wrapper">
-         <div class="swiper-slide"> <img src="images/partner-logo-1.png" alt="Partner Logo 1" class="mx-auto"> </div>
-         <div class="swiper-slide"> <img src="images/partner-logo-2.png" alt="Partner Logo 2" class="mx-auto"> </div>
-         <div class="swiper-slide"> <img src="images/partner-logo-3.png" alt="Partner Logo 3" class="mx-auto"> </div>
-         <div class="swiper-slide"> <img src="images/partner-logo-4.png" alt="Partner Logo 4" class="mx-auto"> </div>
-         <div class="swiper-slide"> <img src="images/partner-logo-5.png" alt="Partner Logo 5" class="mx-auto"> </div>
+         <div class="swiper-slide"> <img src="images/home1.jpg" alt="Partner Logo 1" class="mx-auto"> </div>
+         <div class="swiper-slide"> <img src="images/home2.jpeg" alt="Partner Logo 2" class="mx-auto"> </div>
+         <div class="swiper-slide"> <img src="images/home2.jpg" alt="Partner Logo 3" class="mx-auto"> </div>
+         <div class="swiper-slide"> <img src="images/home3.jpeg" alt="Partner Logo 4" class="mx-auto"> </div>
+         <div class="swiper-slide"> <img src="images/home5.jpeg" alt="Partner Logo 5" class="mx-auto"> </div>
       </div>
    </div>
 </section>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var swiper = new Swiper('.logo-slider', {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            // Add any other Swiper configuration options you need
+        });
+    });
+</script>
+
+
 
 <!-- Logo Slider Ends -->
 
