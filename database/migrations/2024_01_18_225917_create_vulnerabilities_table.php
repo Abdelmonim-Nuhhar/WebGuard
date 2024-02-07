@@ -38,7 +38,7 @@ return new class extends Migration
 
             $table->string('severity'); 
 
-            $table->string('mitigation'); 
+            $table->text('mitigation'); 
 
             $table->boolean('is_fixed'); 
 

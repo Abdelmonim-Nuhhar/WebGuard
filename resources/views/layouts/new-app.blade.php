@@ -7,10 +7,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>WEB GUARD</title>
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-    <!-- Scripts -->
+    <!--link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    < Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <script src="{{ asset('js/my.js') }}"></script>
+    <!--script src="{{ asset('js/my.js') }}"></script-->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
 </head>
@@ -19,7 +19,7 @@
 
     <header class="flex justify-between items-center border-b-2 border-gray-300 p-4">
         <div class="flex flex-between items-start">
-            <img src="{{asset('images/log.JPEG')}}" alt="logo" class="m-2">
+            <img src="{{asset('images/LBU.png')}}" alt="logo" class="m-2">
             <h2 class="text-black-700 p-5 font-bold text-3xl font-mono " >Web Guard</h2>
         </div>
         <div class="space-x-4">
