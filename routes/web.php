@@ -28,6 +28,7 @@ Route::get('/about', [VulnerabilityController::class, 'about'])-> name('about');
 Route::get('/resources', [VulnerabilityController::class, 'resources'])-> name('resources');
 Route::get('/contact', [VulnerabilityController::class, 'contact'])-> name('contact');
 Route::get('/vulnerabilities/{id}', [VulnerabilityController::class, 'show']);
+Route::delete('/vulnerabilities/{id}', [VulnerabilityController::class, 'destroy'])-> name('destroy');
 
 Route::get('/vulnerabilities/{id}/edit', [VulnerabilityController::class, 'edit'])-> name('edit');
 Route::put('/vulnerabilities/{id}/edit', [VulnerabilityController::class, 'update'])-> name('update');
