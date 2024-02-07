@@ -20,7 +20,7 @@
 @section('content')
     <!-- Header -->
     <header class="bg-gradient-to-r from-blue-300 via-blue-100 to-blue-300 text-white p-4 rounded-3xl">
-        <div class="container mx-auto  hover:bg-blue-300">
+        <div class="container mx-auto  ">
             <h1 class="text-4xl font-semibold text-gray-500 p-4 font-semibold text-3xl font-mono">Welcome to Web Guard</h1>
             <p class="text-gray-800 leading-loose">
                 Enhance your knowledge of web application security with Web Guard. <a href="{{ route('register') }}" class="bg-blue-300 text-red-500 font-bold py-2 p-5 rounded-full mt-4 inline-block hover:bg-gray-200 transition duration-300 underline">Register</a>
@@ -32,13 +32,13 @@
     <!-- Main Content -->
     <main class="container mx-auto mt-4 p-4">
     <div class="flex">
-        <div class="w-full sm:w-2/3 hover:bg-blue-100 text-white p-2 rounded-2xl shadow-md text-center mr-2">
+        <div class="w-full sm:w-2/3  text-white p-2 rounded-2xl shadow-md text-center mr-2">
             
         <section class="mb-8">
             <h2 class="text-gray-700 p-2 font-semibold text-2xl font-mono">Features </h2>
             <div class="flex flex-wrap sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <!-- Featured Course Card -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:bg-blue-100">
                     <h3 class="text-gray-700 p-2 font-semibold text-2xl font-mono font-semibold mb-2">Web Vulnerabilities Learning Hub</h3>
                     <p class="text-gray-700 font-mono">
                         Educate web developers about common web vulnerabilities to build a secure website.
@@ -73,21 +73,21 @@
 
 
     <div class="flex">
-    <div class="w-full sm:w-2/3  text-white p-2 rounded-2xl shadow-md text-center mr-2">
-        <section class="mb-8">
-            <h2 class="text-gray-700 p-2 font-semibold text-2xl font-mono font-semibold mb-2">Why Register with Web Guard?</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md font-mono hover:bg-blue-100">
-            <ul class="list-disc pl-6 text-gray-800 leading-loose">
+    <div class="w-full sm:w-2/3 text-white p-2 rounded-2xl shadow-md text-center mr-2">
+    <section class="mb-8">
+        <h2 class="text-gray-700 p-2 font-semibold text-2xl font-mono mb-2">Why Register with Web Guard?</h2>
+        <div class="bg-white p-4 rounded-lg shadow-md font-mono hover:bg-blue-100">
+            <ul class="list-disc  text-gray-800 ">
                 <li>Unlock the full potential of Web Guard by registering for an account.</li>
                 <li>Access to our Learning Hub with hands-on exercises on common web vulnerabilities.</li>
                 <li>Exclusive educational resources to help you build a secure website.</li>
                 <li>Engage with a community of like-minded web developers and security enthusiasts.</li>
                 <li>Stay updated with the latest trends and best practices in web application security.</li>
             </ul>
-            </div>
-        </section>
-
+        </div>
+    </section>
 </div>
+
 <div class="w-full sm:w-1/3 rounded-3xl overflow-hidden">
         <div class="transition-transform transform-gpu hover:scale-110">
             <img src="{{asset('images/home2.jpeg')}}" alt="logo" class="w-full h-full object-cover rounded-3xl">

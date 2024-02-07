@@ -11,9 +11,9 @@
         </a>
     </div>
     @can('create', App\Models\Vulnerability::class)
-    <div class="m-5 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-md bg-red-400 border-blue-300">
-        <a href="{{ route('index') }}" class="text-gray-700 p-5 font-semibold text2xl font-mono">
-            Edit Vulnerability
+    <div class="m-5 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-md bg-red-400 border-blue-300 p-2">
+        <a href="{{ route('index') }}" class="text-white p-5 font-semibold text-2xl font-mono">
+            Edit L-Hub
         </a>
     </div>
     @endcan
@@ -25,7 +25,7 @@
     @auth
     @can('create', App\Models\Vulnerability::class)
         
-    <a href="{{ route('create') }}" class="text-gray-900 p-8 font-semibold text-2xl font-mono">
+    <a href="{{ route('create') }}" class="text-white p-3 rounded-2xl font-semibold text-2xl font-mono bg-red-400">
         Add Vulnerability
     </a>
 
