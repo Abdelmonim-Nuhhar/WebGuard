@@ -29,6 +29,9 @@ Route::get('/resources', [VulnerabilityController::class, 'resources'])-> name('
 Route::get('/contact', [VulnerabilityController::class, 'contact'])-> name('contact');
 Route::get('/vulnerabilities/{id}', [VulnerabilityController::class, 'show']);
 
+Route::get('/vulnerabilities/{id}/edit', [VulnerabilityController::class, 'edit'])-> name('edit');
+Route::put('/vulnerabilities/{id}/edit', [VulnerabilityController::class, 'update'])-> name('update');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
