@@ -54,7 +54,7 @@
                     </p>
                 </div>
                 <!-- Edit Button -->
-                <div class="m-5 flex justify-center items-center transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl hover:underline bg-red-700 border-blue-300 p-5">
+                <div class="m-5 flex justify-center items-center transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl hover:underline bg-red-400 border-blue-900 p-4">
                     <a href="{{ route('index') . '/' . $vulnerability->id . '/' .'edit'}}" class="text-white font-semibold text-2xl font-mono">
                         Edit
                     </a>
@@ -68,39 +68,46 @@
                 </div>
             @endif
         @else
+        @endcan
 
-        <!-- Vulnerabilities lists Section Starts -->
-            <div class="flex mb-2">
-                <!-- Vulnerability Name Column -->
-                <div class="w-full sm:w-1/4">
-                    <div class="bg-white hover:bg-gray-200 text-gray-800 p-3 rounded-2xl shadow-md text-center text-gray-800 p-5 font-semibold text-1xl font-mono">
-                        The Vulnerability Name
-                    </div>
-                </div>
+        @if($counter % 2 == 0)
+                <div class="flex flex-wrap justify-between pl-16">
+            @endif
 
-                <!-- Vulnerability Description Column -->
-                <div class="w-full sm:w-3/4">
-                    <div class="bg-white hover:bg-gray-200 text-gray-800 ml-2 p-3 rounded-2xl shadow-md text-center text-gray-800 p-5 font-semibold text-1xl font-mono">
-                        The Vulnerability Description
-                    </div>
-                </div>
-            </div>
-
-            <!-- Non-Admin View of Vulnerabilities -->
-            <div class="m-6 w-full sm:w-1/4 p-3 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl bg-red-300 border-blue-300">
-                <a href="{{ route('index') . '/' . $vulnerability->id }}" class="text-gray-800 p-5 font-semibold text-1xl font-mono underline">
-                    {{ $vulnerability->name }}
-                </a>
-            </div>
-
-            <div class="m-8 m-5w-full sm:w-3/4">
-                <div class="bg-blue-100 hover:bg-blue-200 text-gray-800 p-6 rounded-2xl shadow-md text-center text-1xl">
-                    <p>
-                        {{ $vulnerability->description }}
+            <!-- Vulnerability Details Card -->
+            
+            <div class="p-4 mx-2 my-2 rounded-2xl shadow-lg bg-gray-200 border-2 border-blue-900 max-w-xl ">
+                
+                <div class="flex justify-start">
+                
+                    <!-- Vulnerability Details -->
+                    <p class="text-gray-700 p-5 font-medium text-base font-mono">
+                    <span class="text-red-600 font-bold text-2xl">{{ $vulnerability->name }}</span>
+                        <br><br>A Vulnerability details are as follows:
+                        <br>
+                        <br>The Vulnerability ID: <span class="text-red-500">{{ $vulnerability->id }}</span>
+                        <br>The name: <span class="text-red-500">{{ $vulnerability->name }}</span>
+                        <br>The description: <span class="text-red-500">{{ $vulnerability->description }}</span>
+                        <br>The severity: <span class="text-red-500">{{ $vulnerability->severity }}</span>
+                        <br>The mitigation could be: <span class="text-red-500">{{ $vulnerability->mitigation }}</span>
+                        <br>The status (1 for fixed, 0 for not fixed): <span class="text-red-500">{{ $vulnerability->is_fixed }}</span>
                     </p>
                 </div>
+                <!-- Edit Button -->
+                <div class="m-5 flex justify-center items-center transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl hover:underline bg-blue-400 border-blue-900 p-4">
+                    <a href="{{ route('index') . '/' . $vulnerability->id }}" class="text-white font-semibold text-2xl font-mono">
+                        Select
+                    </a>
+                </div>
             </div>
-        @endcan
+
+            @php $counter++ @endphp
+
+            <!-- Check for even number of vulnerabilities or last loop -->
+            @if($counter % 2 == 0 || $loop->last)
+                </div>
+            @endif
+
     </div>
     @endforeach
 
