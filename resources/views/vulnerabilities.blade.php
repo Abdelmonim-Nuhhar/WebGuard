@@ -68,8 +68,6 @@
                 </div>
             @endif
         @else
-        @endcan
-
         @if($counter % 2 == 0)
                 <div class="flex flex-wrap justify-between pl-16">
             @endif
@@ -107,6 +105,9 @@
             @if($counter % 2 == 0 || $loop->last)
                 </div>
             @endif
+        @endcan
+
+        
 
     </div>
     @endforeach
