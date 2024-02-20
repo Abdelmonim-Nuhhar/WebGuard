@@ -25,7 +25,7 @@
     @auth
     @can('create', App\Models\Vulnerability::class)
         
-    <a href="{{ route('create') }}" class="text-white p-3 rounded-2xl font-semibold text-2xl font-mono bg-red-400">
+    <a href="{{ route('create') }}" class="text-gray-900 p-8 rounded-2xl font-bold text-3xl font-mono ">
         Add Vulnerability
     </a>
 

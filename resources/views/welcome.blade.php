@@ -19,17 +19,52 @@
 
 @section('content')
     <!-- Header -->
-    <header class="bg-gradient-to-r from-blue-300 via-blue-100 to-blue-300 text-white p-4 rounded-3xl">
+    <div class="bg-gradient-to-r from-blue-400 via-blue-100 to-blue-300 text-white p-4 rounded-3xl pt-16 pb-16">
+
+    @auth 
+    @can('create', App\Models\Vulnerability::class)
+    <p class="text-blue-800 p-4 font-bold text-3xl font-mono bg-red-200 mb-16 rounded-3xl">
+    Welcome, Admin  
+
+                            <span class="text-gray-800 text-4xl">{{ Auth::user()->name }}. </span>You can manage the Learning Hub.
+
+                               <br>
+                               <br>
+                               <p class="text-gray-700 p-4 font-bold text-2xl font-mono ">
+
+                               Click <a href="{{ route('index') }}" class="bg-red-400 p-3 text-white pl-4 rounded-2xl">Edit L-Hub</a> to edit the existing vulnerabilities.
+                               <br>
+                               <br>
+                               Click  <a href="{{ route('create') }}" class="bg-red-200 p-3  pl-4 rounded-2xl " >Add Vulnerability</a>  to add a new vulnerability.
+                            </p>
+
+    </p>
+    </div>
+    @else
+    <p class="text-gray-700 p-4 font-bold text-2xl font-mono ">
+    Welcome <span class="text-red-600 text-4xl">{{ Auth::user()->name }}</span> to Learning Hub. You can now click on Learning Hub to learn and practice.
+</div>
+                               
+    </p>
+    <div class="w-full sm:w-1/3 rounded-3xl overflow-hidden">
+        <div class="transition-transform transform-gpu hover:scale-110">
+            <img src="{{asset('images/home5.jpeg')}}" alt="logo" class="w-full h-full object-cover rounded-3xl">
+        </div>
+    </div>
+
+    
+    @endcan
+
+    @else
         <div class="container mx-auto  ">
-            <h1 class="text-4xl font-semibold text-gray-500 p-4 font-semibold text-3xl font-mono">Welcome to Web Guard</h1>
+            <h1 class="text-4xl font-semibold text-gray-500 p-4 font-semibold text-3xl font-mono">Welcome to  Web Guard</h1>
             <p class="text-gray-800 leading-loose">
                 Enhance your knowledge of web application security with Web Guard. <a href="{{ route('register') }}" class="bg-blue-300 text-red-500 font-bold py-2 p-5 rounded-full mt-4 inline-block hover:bg-gray-200 transition duration-300 underline">Register</a>
                  now to access exclusive Learning Hub and resources.
             </p>
         </div>
-    </header>
 
-    <!-- Main Content -->
+        <!-- Main Content -->
     <main class="container mx-auto mt-4 p-4">
     <div class="flex">
         <div class="w-full sm:w-2/3  text-white p-2 rounded-2xl shadow-md text-center mr-2">
@@ -105,6 +140,10 @@
             </div>
         </section>
     </main>
+        @endauth
+</div>
+
+    
 
     <!-- JavaScript to toggle description and scroll -->
     <script src="{{ asset('js/jsFile.js') }}"></script>

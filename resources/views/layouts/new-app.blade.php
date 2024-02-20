@@ -17,19 +17,20 @@
 
 <body class="font-sans bg-gray-100">
 
-    <header class="flex justify-between items-center border-b-2 border-gray-300 p-4">
-        <div class="flex flex-between items-start">
-            <img src="{{asset('images/LBU.png')}}" alt="logo" class="m-2">
-            <h2 class="text-black-700 p-5 font-bold text-3xl font-mono " >Web Guard</h2>
+<header class="flex justify-between items-center border-b-2 border-blue-500 border-gray-300 p-4  shadow-md bg-gray-800 rounded-2xl ">
+        <div class="flex items-center">
+            <img src="{{ asset('images/LBU.png') }}" alt="logo" class="h-32 w-auto">
+            <h2 class="text-white p-5 font-bold text-4xl font-mono pl-32 font-italic ">Web Guard</h2>
         </div>
+
         <div class="space-x-4">
             @auth
             @include('components.settings_dropdown')
             @endauth
             @guest
-            <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
+            <a href="{{ route('login') }}" class="text-white p-5 font-semibold text-2xl font-mono underline">Login</a>
             @if (Route::has('register'))
-            <a href="{{ route('register') }}" class="text-sm text-gray-700 underline">Register</a>
+            <a href="{{ route('register') }}" class="text-white p-5 font-semibold text-2xl font-mono underline">Register</a>
             @endif
             @endguest
         </div>
@@ -42,9 +43,9 @@
     </main>
 
     {{-- Footer Section --}}
-    <footer class="bg-gray-800 text-white text-center p-4">
+    <footer class="bg-gray-800 text-white text-center p-4 border-blue-500 border-gray-300   shadow-md bg-gray-800 rounded-2xl">
         {{-- Include your footer content here --}}
-        &copy; {{ date('Y') }} Web Guard Vulnerabilities. All rights reserved.
+        <h2 class="text-white p-5 font-bold text-2xl font-mono pl-32 font-italic "> &copy; {{ date('Y') }} Web Guard Vulnerabilities. All rights reserved.</h2>
     </footer>
 
 </body>
