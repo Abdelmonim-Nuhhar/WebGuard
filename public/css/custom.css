@@ -1,0 +1,33 @@
+/* Custom CSS - custom.css */
+
+/* Make the header sticky */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* Increase padding on the main content */
+main {
+    padding-top: 8rem; /* Adjust as needed based on header height */
+}
+
+/* Style the logo image */
+header img {
+    height: 3rem; /* Adjust size as needed */
+}
+
+/* Style the navigation links */
+header nav a {
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #4a5568; /* Change hover color */
+}
+
+/* Add some spacing to the footer content */
+footer p {
+    margin-bottom: 1rem;
+}

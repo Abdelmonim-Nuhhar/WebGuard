@@ -6,14 +6,14 @@
     <!-- Conditional check for user permissions -->
     @can('create', App\Models\Vulnerability::class)
         <!-- Admin Welcome Message -->
-        <h3 class="text-xl font-bold text-blue-800 mb-6">Welcome Learning Hub Management For administrators</h3>
+        <h3 class="text-2xl font-bold text-blue-800 mb-6 font-mono">Welcome <span class="text-red-500">{{ Auth::user()->name }} </span> you  are an administrator</h3>
         <p class="text-lg font-semibold text-gray-700 mb-6 font-mono">
             This is the editing page for administrators.
             <br>Click "Edit" to update or remove a vulnerability.
         </p>
     @else
         <!-- User Welcome Message -->
-        <h2 class="text-4xl font-bold text-blue-800 mb-6">Welcome to Web Vulnerabilities Learning Hub</h2>
+        <h2 class="text-4xl font-bold text-blue-800 mb-6 font-mono">Welcome <span class="text-red-600 text-4xl">{{ Auth::user()->name }}</span>  This is the Web Vulnerabilities Learning Hub</h2>
         <p class="text-lg text-gray-600 mb-8">
             Explore the fascinating world of web vulnerabilities and enhance your understanding of web security.
             Click on any vulnerability below to learn more about it and discover how to protect against potential threats.
