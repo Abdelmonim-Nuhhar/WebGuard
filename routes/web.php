@@ -33,6 +33,7 @@ Route::delete('/vulnerabilities/{id}', [VulnerabilityController::class, 'destroy
 Route::get('/vulnerabilities/{id}/edit', [VulnerabilityController::class, 'edit'])-> name('edit');
 Route::put('/vulnerabilities/{id}/edit', [VulnerabilityController::class, 'update'])-> name('update');
 
+Route::post('/vulnerabilities/{id}', [VulnerabilityController::class, 'show']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
