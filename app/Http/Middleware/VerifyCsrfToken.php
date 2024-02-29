@@ -12,6 +12,9 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        //
+        'weak_session.low',
+        'weak_session.medium',
+        'weak_session.high',
     ];
+    
 }
