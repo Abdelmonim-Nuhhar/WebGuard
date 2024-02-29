@@ -35,6 +35,12 @@ Route::put('/vulnerabilities/{id}/edit', [VulnerabilityController::class, 'updat
 
 Route::post('/vulnerabilities/{id}', [VulnerabilityController::class, 'show']);
 
+// Routes for weak session ID vulnerabilities
+Route::post('/vulnerabilities/weak_session/low', [VulnerabilityController::class, 'generateWeakSessionLow'])->name('weak_session.low');
+Route::post('/vulnerabilities/weak_session/medium', [VulnerabilityController::class, 'generateWeakSessionMedium'])->name('weak_session.medium');
+Route::post('/vulnerabilities/weak_session/high', [VulnerabilityController::class, 'generateWeakSessionHigh'])->name('weak_session.high');
+Route::post('/vulnerabilities/weak_session/impossible', [VulnerabilityController::class, 'generateWeakSessionImpossible'])->name('weak_session.impossible');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
