@@ -1,0 +1,24 @@
+ public function generateWeakSessionLow(Request $request)
+    {
+        $sessionId = Session::has('last_session_id') ? Session::get('last_session_id') + 1 : 1;
+        Session::put('last_session_id', $sessionId);
+        $cookieValue = $sessionId;
+    
+        // Define the $fileContent variable
+        $fileContent = '';
+    
+        if ($request->has('found_session_id') && $request->found_session_id == $cookieValue) {
+            // Read the file content
+            $fileContent = file_get_contents('C:\Users\Hilmee\PP\web-guard\files\low_level_source_code.txt');
+    
+            // Pass the vulnerability level and file content to the view
+            return view('found_session_id', [
+                'found_session_id' => $cookieValue,
+                'vulnerabilityLevel' => 'Low',
+                'fileContent' => $fileContent,
+            ]);
+        }
+    
+        Session::flash('alert', 'Session ID is: ' . $cookieValue);
+        return redirect()->back();
+    }
