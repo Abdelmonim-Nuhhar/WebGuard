@@ -34,6 +34,8 @@ Route::get('/vulnerabilities/{id}/edit', [VulnerabilityController::class, 'edit'
 Route::put('/vulnerabilities/{id}/edit', [VulnerabilityController::class, 'update'])-> name('update');
 
 Route::post('/vulnerabilities/{id}', [VulnerabilityController::class, 'show']);
+Route::post('/vulnerabilities/1', [VulnerabilityController::class, 'show'])->name('sessionID');
+
 
 // Routes for weak session ID vulnerabilities
 Route::post('/vulnerabilities/weak_session/low', [VulnerabilityController::class, 'generateWeakSessionLow'])->name('weak_session.low');
