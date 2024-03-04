@@ -95,6 +95,13 @@
 
             <h2 class="text-xl text-red-500  font-bold mb-4 font-mono">Source code for a low-level weak session ID vulnerability</h2>
             <pre>{{ $fileContent }}</pre>
+
+            @if (session('message'))
+                <div class="alert alert-info">
+                    {{ session('message') }}
+                </div>
+            @endif
+
         </div>
         @endif
         <div class="mb-4 bg-white p-6 rounded-2xl">
