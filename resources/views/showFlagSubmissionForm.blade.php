@@ -14,8 +14,14 @@
                 @endif
 
                 @if (session('success'))
-                <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-6" role="alert">
+                <div class="bg-blue-100 border-l-4 border-blue-500 text-green-700 font-mono text-2xl p-4 mb-6" role="alert">
                     {{ session('success') }}
+                </div>
+                @endif
+
+                @if (session('error'))
+                <div class="bg-blue-100 border-l-4 border-blue-500 text-red-700 font-mono text-2xl p-4 mb-6" role="alert">
+                    {{ session('error') }}
                 </div>
                 @endif
 
@@ -29,7 +35,7 @@
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                         @enderror
                     </div>
-
+                    
                     <div class="mb-4">
                         <label for="level" class="block text-gray-700 font-bold mb-2">Flag Level</label>
                         <select id="level" name="level" class="form-select w-full @error('level') border-red-500 @enderror">

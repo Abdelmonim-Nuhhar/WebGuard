@@ -20,6 +20,15 @@
             <p class="text-2xl text-blue-500  font-bold mb-4 font-mono">
                 You have successfully identified and mitigated a low-level weak session ID vulnerability.
             </p>
+
+            <p class="text-2xl text-green-500  font-bold mb-4 font-mono">
+            flag:725bc77aa1443d8074e05c7710ef9245
+            </p>
+            
+
+
+ 
+
             <hr class="my-2 border-blue-800">
             <div class="font-mono text-1g text-yellow-600" id="fileContent" style="display: none;">
                 <pre>{{ $fileContent }}</pre>
@@ -44,6 +53,11 @@
             <p class="text-2xl text-yellow-500  font-bold mb-4 font-mono">
                 You have successfully identified and mitigated a medium-level weak session ID vulnerability.
             </p>
+
+            <p class="text-2xl text-green-500  font-bold mb-4 font-mono">
+            flag:7eab4bebad099e7a4eb0d913f9e307e7
+            </p>
+
             <hr class="my-2 border-blue-800">
             <div class="font-mono text-1g text-yellow-600" id="fileContent" style="display: none;">
                 <pre>{{ $fileContent }}</pre>
@@ -68,6 +82,11 @@
             <p class="text-2xl text-red-500  font-bold mb-4 font-mono">
                 You have successfully identified and mitigated a high-level weak session ID vulnerability.
             </p>
+
+            <p class="text-2xl text-green-500  font-bold mb-4 font-mono">
+            flag:1119d47604d28ba9abc28b5d5070870a
+            </p>
+
             <hr class="my-2 border-blue-800">
             <div class="font-mono text-1g text-yellow-600" id="fileContent" style="display: none;">
                 <pre class="font-mono text-1g text-yellow-600">{{ $fileContent }}</pre>
@@ -91,6 +110,10 @@
         <div class="mb-4 bg-white p-6 rounded-xl">
             <p class="text-2xl text-red-500  font-bold mb-4 font-mono">
                 You have successfully identified and mitigated an impossible-level weak session ID vulnerability.
+            </p>
+
+            <p class="text-2xl text-green-500  font-bold mb-4 font-mono">
+            flag:d868108b0588d07ce90733d43e7e18f0 
             </p>
 
             <h2 class="text-xl text-red-500  font-bold mb-4 font-mono">Source code for a low-level weak session ID vulnerability</h2>
