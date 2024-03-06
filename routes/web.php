@@ -43,10 +43,26 @@ Route::post('/vulnerabilities/weak_session/medium', [VulnerabilityController::cl
 Route::post('/vulnerabilities/weak_session/high', [VulnerabilityController::class, 'generateWeakSessionHigh'])->name('weak_session.high');
 Route::post('/vulnerabilities/weak_session/impossible', [VulnerabilityController::class, 'generateWeakSessionImpossible'])->name('weak_session.impossible');
 
+
 // Routes for flags submisson
 Route::get('/showFlagSubmissionForm', [VulnerabilityController::class, 'showFlagSubmissionForm'])->name('showFlagSubmissionForm');
 
 Route::post('/showFlagSubmissionForm', [VulnerabilityController::class, 'submitFlag'])->name('submitFlag');
+
+// XSS
+
+Route::get('/xss/reflected', [VulnerabilityController::class, 'reflectedXSS'])->name('xss.reflected');
+Route::get('/xss/medium', [VulnerabilityController::class, 'reflectedXSSMedium'])->name('xss.medium');
+Route::get('/xss/high', [VulnerabilityController::class, 'reflectedXSSHigh'])->name('xss.high');
+Route::get('/xss/impossible', [VulnerabilityController::class, 'reflectedXSSImpossible'])->name('xss.impossible');
+
+
+
+Route::get('/xss/stored', [VulnerabilityController::class, 'storedXSS'])->name('xss.stored');
+Route::get('/xss/dom', [VulnerabilityController::class, 'domXSS'])->name('xss.dom');
+
+
+
 
 
 Route::get('/dashboard', function () {

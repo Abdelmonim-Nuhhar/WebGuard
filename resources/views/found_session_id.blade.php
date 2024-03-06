@@ -21,9 +21,17 @@
                 You have successfully identified and mitigated a low-level weak session ID vulnerability.
             </p>
 
-            <p class="text-2xl text-green-500  font-bold mb-4 font-mono">
-            flag:725bc77aa1443d8074e05c7710ef9245
-            </p>
+
+            <div class="flex items-center justify-between mt-4 p-8 bg-gray-200 mt-4">
+                <p class="text-2xl text-green-500  font-bold mb-4 font-mono">
+                flag:725bc77aa1443d8074e05c7710ef9245
+                </p>
+
+                <a href="{{ route('showFlagSubmissionForm') }}"  class="bg-blue-800 hover:bg-blue-600 text-white p-4 font-bold  rounded-2xl">
+                    Submit The flag
+                </a>
+            </div>
+           
             
 
 
@@ -37,6 +45,7 @@
                 Toggle Source Code
             </button>
 
+           
         </div>
         <div class="mb-4 bg-white p-6 rounded-2xl">
             <p class="text-2xl text-blue-500  font-bold mb-4 font-mono mb-8">
@@ -53,10 +62,16 @@
             <p class="text-2xl text-yellow-500  font-bold mb-4 font-mono">
                 You have successfully identified and mitigated a medium-level weak session ID vulnerability.
             </p>
+            <div class="flex items-center justify-between mt-4 p-8 bg-gray-200 mt-4">
+                <p class="text-2xl text-green-500  font-bold mb-4 font-mono">
+                flag:7eab4bebad099e7a4eb0d913f9e307e7
+                </p>
 
-            <p class="text-2xl text-green-500  font-bold mb-4 font-mono">
-            flag:7eab4bebad099e7a4eb0d913f9e307e7
-            </p>
+                <a href="{{ route('showFlagSubmissionForm') }}"  class="bg-blue-800 hover:bg-blue-600 text-white p-4 font-bold  rounded-2xl">
+                        Submit The flag
+                </a>
+
+            </div>
 
             <hr class="my-2 border-blue-800">
             <div class="font-mono text-1g text-yellow-600" id="fileContent" style="display: none;">
@@ -65,6 +80,7 @@
             <button onclick="toggleFileContent()" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">
                 Toggle Source Code
             </button>
+
         </div>
 
         <div class="mb-4 bg-white p-6 rounded-2xl">
@@ -83,10 +99,18 @@
                 You have successfully identified and mitigated a high-level weak session ID vulnerability.
             </p>
 
-            <p class="text-2xl text-green-500  font-bold mb-4 font-mono">
-            flag:1119d47604d28ba9abc28b5d5070870a
-            </p>
+            <div class="flex items-center justify-between mt-4 p-8 bg-gray-200 mt-4">
+                <p class="text-2xl text-green-500  font-bold mb-4 font-mono">
+                flag:1119d47604d28ba9abc28b5d5070870a
+                </p>
 
+                <a href="{{ route('showFlagSubmissionForm') }}"  class="bg-blue-800 hover:bg-blue-600 text-white p-4 font-bold  rounded-2xl">
+                        Submit The flag
+                </a>
+            </div>
+
+
+            
             <hr class="my-2 border-blue-800">
             <div class="font-mono text-1g text-yellow-600" id="fileContent" style="display: none;">
                 <pre class="font-mono text-1g text-yellow-600">{{ $fileContent }}</pre>
@@ -153,6 +177,8 @@
                     fileContentDiv.style.display = "none";
                 }
             }
+
+
         </script>
 
         <!-- Add script for toggling file content for other levels -->

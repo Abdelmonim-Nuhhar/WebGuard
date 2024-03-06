@@ -34,6 +34,8 @@
         <a href="{{ route('index') }}" class="text-gray-700 p-8 font-semibold text-3xl font-mono">
             Learning Hub
         </a>
+
+
     @endcan
     @else
         <a href="{{ route('login') }}" class="text-gray-700 p-8 font-semibold text-3xl font-mono">
@@ -41,12 +43,17 @@
         </a>
     @endauth
 
-
-
-
     </div>
 
-    
+    @auth
+        @cannot('create', App\Models\Vulnerability::class)
+            <div class="m-5 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-lg bg-red-200 border-blue-300">
+                <a href="{{ route('showFlagSubmissionForm') }}" class="text-gray-700 p-8 font-semibold text-3xl font-mono">
+                    Flags/Dashboard
+                </a>
+            </div>
+        @endcannot
+    @endauth
 
 
     <div class="m-5 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-md bg-red-200 border-blue-300">
@@ -60,4 +67,9 @@
             Contacts
         </a>
     </div>
+
+
+
+    
+     </div>
 </nav>
