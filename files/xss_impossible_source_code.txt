@@ -1,0 +1,18 @@
+public function reflectedXSSImpossible()
+    {
+        // Check if there is any input
+        if (request()->has('name') && request()->input('name') !== null) {
+            // Check Anti-CSRF token
+            $userToken = request()->input('user_token');
+            $sessionToken = Session::token();
+            $this->checkToken($userToken, $sessionToken);
+
+            // Get input and sanitize it
+            $name = htmlspecialchars(request()->input('name'));
+
+
+            $fileContent = file_get_contents('C:\Users\Hilmee\PP\web-guard\files\xss_impossible_source_code.txt');
+    
+            // Pass the user input and file content to the view
+            return view('reflected-xss-impossible', compact('name'));
+        }

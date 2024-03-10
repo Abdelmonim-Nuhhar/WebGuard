@@ -10,7 +10,13 @@
 
 <div class="p-4 m-2 rounded-lg shadow-lg bg-blue-900 border-1 border-blue-900 font-mono mb-8 text-white">
     <div class="bg-gray-200 p-3 mb-4 rounded-2xl hover:bg-gray-300 ">
-        <h1 class="text-xl font-bold mb-2 text-gray-800">Cross-Site Scripting (XSS)</h1>
+    <hr class="my-2 border-blue-800">
+    <div class="m-5 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl p-4 rounded-2xl bg-red-200 border-blue-300">
+        <a href="{{ route('xss') }}" class="text-gray-700  font-semibold text-3xl font-mono">
+        Cross-Site Scripting (XSS)
+        </a>
+    </div>
+        
         <hr class="my-2 border-blue-800">
         <h1 class="text-xl font-bold mb-2 text-gray-800">Practice Section</h1>
 
@@ -18,12 +24,13 @@
 
 
         <div class=" m-2 rounded-lg shadow-lg bg-blue-100 border-2 border-blue-900 ">
-        <div class="m-5   rounded-2xl bg-red-200 border-blue-300 p-8 mb-8">
-            <a href="" class="text-gray-900 p-8 font-semibold text-2xl font-mono">
+        <div class="m-5   rounded-2xl bg-red-200 border-blue-300 p-8 mb-8 
+        transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl ">
+            <button href="" class="text-gray-700  font-semibold text-3xl font-mono">
                 Reflected  XSS
-            </a>
+            </button>
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center ">
             <div class="m-5 w-80 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl bg-blue-400 border-blue-400 p-4 mb-2 hover:bg-blue-300">
                 <a href="{{ route('xss.reflected') }}" class="text-gray-900 p-8 font-semibold text-xl font-mono">
                     Reflected Low 

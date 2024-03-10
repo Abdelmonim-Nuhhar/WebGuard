@@ -1,0 +1,14 @@
+public function reflectedXSSMedium()
+    {
+        // Retrieve user input from the request
+        $name = request()->input('name');
+    
+        // Apply custom filter to remove <script> tags
+        $name = preg_replace('#<script(.*?)>(.*?)</script>#is', '', $name);
+    
+        // Get file content
+        $fileContent = file_get_contents('C:\Users\Hilmee\PP\web-guard\files\medium_level_source_code.txt');
+    
+        // Pass the user input and file content to the view
+        return view('reflected-xss-medium', compact('name', 'fileContent'));
+    }

@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <!--link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     < Scripts -->
+    <!-- external JavaScript file -->
+    <script src="{{ asset('js/xss_toggle.js') }}"></script>
+    <script src="{{ asset('js/toggleFileContent.js') }}"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <!--script src="{{ asset('js/my.js') }}"></script-->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">

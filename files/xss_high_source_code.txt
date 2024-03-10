@@ -1,0 +1,13 @@
+    public function reflectedXSSHigh()
+    {
+        // Retrieve user input from the request
+        $name = request()->input('name');
+
+        // Apply custom filter to remove potentially harmful content
+        $name = preg_replace('/<(.*)s(.*)c(.*)r(.*)i(.*)p(.*)t/i', '', $name);
+
+        $fileContent = file_get_contents('C:\Users\Hilmee\PP\web-guard\files\xss_high_source_code.txt');
+    
+        // Pass the user input and file content to the view
+        return view('reflected-xss-high', compact('name', 'fileContent'));
+    }

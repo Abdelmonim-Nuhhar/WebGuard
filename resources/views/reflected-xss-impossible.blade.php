@@ -14,6 +14,53 @@
    
     <!-- Practice Section -->
     <div class="w-2/3 bg-white-100 rounded-xl p-6">
+
+    <div class="text-1g mb-4 bg-white p-4 rounded-2xl font-mono p-2">
+            <p>
+            In the impossible-level demonstration, an exhaustive approach is undertaken to combat reflected XSS
+             vulnerabilities with multiple layers of defense mechanisms. This method employs stringent checks
+              and sanitization procedures to ensure the utmost protection against malicious script injections. <br><br>
+
+        Firstly, the function verifies the existence of user input and ensures it is not null. It then proceeds
+         to validate the Anti-CSRF token provided by the user against the session token to prevent CSRF attacks.
+          This step helps guarantee the authenticity of the request and mitigates the risk of unauthorized 
+          actions. <br><br>
+
+        Next, the input is sanitized using the htmlspecialchars function, which converts special characters
+         to their corresponding HTML entities. This sanitization process ensures that any potentially harmful
+          content, including script tags and other HTML elements, is neutralized before being displayed to users.
+
+        By implementing these rigorous security measures, the impossible-level demonstration sets a high 
+        standard for protecting against reflected XSS vulnerabilities. It showcases the importance of 
+        comprehensive security practices in web development to safeguard against a wide range of attack 
+        vectors and ensure the integrity of web applications.
+            </p>
+
+
+            <button onclick="toggleFileContent()" id="ToggleSourceCode" class="bg-indigo-600 text-white px-8 py-2 rounded-md mb-2 mt-2">
+                Toggle Source Code
+            </button>
+            <div class="font-mono text-1g  mt-4 bg-green-100 p-4 rounded-2xl border-2 border-blue-900" id="fileContent" style="display: none;">
+                <pre class="font-mono text-1g text-black">{{ $fileContent }}</pre>
+            </div>
+
+        </div>
+
+            
+        <x-security-awareness-message>
+        <br><br> Try your best if you can get any vulnerabilities:<br>
+            
+                <!-- Button to toggle content visibility -->
+        <button id="toggleButton" class="bg-indigo-600 text-white px-4 py-2 rounded-md mb-4">
+            Toggle XSS Testing Suggestions
+        </button>
+
+        </x-security-awareness-message>
+
+        <div id="xssSuggestions" style="display: none;" class="bg-white rounded-2xl p-4 mb-4">
+            <x-xss-injection-examples></x-xss-injection-examples>
+        </div>
+
         
         <div class="bg-gray-200 p-8 rounded-2xl">
             <h1 class="text-2xl font-bold mb-4 font-mono">Reflected XSS Vulnerability - Impossible Level</h1>

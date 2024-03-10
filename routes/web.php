@@ -35,6 +35,7 @@ Route::put('/vulnerabilities/{id}/edit', [VulnerabilityController::class, 'updat
 
 Route::post('/vulnerabilities/{id}', [VulnerabilityController::class, 'show']);
 Route::post('/vulnerabilities/1', [VulnerabilityController::class, 'show'])->name('sessionID');
+Route::post('/vulnerabilities/3', [VulnerabilityController::class, 'show'])->name('xss');
 
 
 // Routes for weak session ID vulnerabilities
