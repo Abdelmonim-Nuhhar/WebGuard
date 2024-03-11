@@ -58,8 +58,29 @@ Route::get('/xss/high', [VulnerabilityController::class, 'reflectedXSSHigh'])->n
 Route::get('/xss/impossible', [VulnerabilityController::class, 'reflectedXSSImpossible'])->name('xss.impossible');
 
 
-
+// stored XSS vulnerabilities
 Route::get('/xss/stored', [VulnerabilityController::class, 'storedXSS'])->name('xss.stored');
+// stored XSS low level
+Route::get('/storedXSS/low', [VulnerabilityController::class, 'showLowLevelForm'])->name('storedXSS.low');
+Route::post('/storedXSS/low', [VulnerabilityController::class, 'storeLowLevelComment'])->name('storedXSS.storeLow');
+
+// stored XSS medium level
+Route::get('/storedXSS/medium', [VulnerabilityController::class, 'showMediumLevelForm'])->name('storedXSS.medium');
+Route::post('/storedXSS/medium', [VulnerabilityController::class, 'storeMediumLevelComment'])->name('storedXSS.storeMedium');
+
+// stored XSS high level
+Route::get('/storedXSS/high', [VulnerabilityController::class, 'showHighLevelForm'])->name('storedXSS.high');
+Route::post('/storedXSS/high', [VulnerabilityController::class, 'storeHighLevelComment'])->name('storedXSS.storeHigh');
+
+// stored XSS imposible level
+Route::get('/storedXSS/impossible', [VulnerabilityController::class, 'showImpossibleLevelForm'])->name('storedXSS.impossible');
+Route::post('/storedXSS/impossible', [VulnerabilityController::class, 'storeImpossibleLevelComment'])->name('storedXSS.storeImpossible');
+
+
+Route::post('/guestbook/clear', [VulnerabilityController::class, 'clearGuestbook'])->name('guestbook.clear');
+
+
+
 Route::get('/xss/dom', [VulnerabilityController::class, 'domXSS'])->name('xss.dom');
 
 
