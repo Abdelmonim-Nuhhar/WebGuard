@@ -9,14 +9,14 @@
 </head>
 <body>
 
-        <div class="p-4 m-2 rounded-lg shadow-lg bg-blue-900 border-1 border-blue-900 font-mono mb-8 text-white">
-            <div class="bg-gray-200 p-3 mb-4 rounded-2xl hover:bg-gray-300 ">
-            <div class="m-5 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl p-4 rounded-2xl bg-red-200 border-blue-300 flex items-center">
-            <a href="{{ route('xss') }}" class="text-gray-700 font-semibold text-2xl font-mono flex items-center">
-                <span class="text-3xl mr-2">&#8592;</span> <!-- Big back sign -->
-                XSS Types Menu
-            </a>
-        </div>
+    <div class="p-4 m-2 rounded-lg shadow-lg bg-blue-900 border-1 border-blue-900 font-mono mb-8 text-white">
+        <div class="bg-gray-200 p-3 mb-4 rounded-2xl hover:bg-gray-300 ">
+        <div class="m-5 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl p-4 rounded-2xl bg-red-200 border-blue-300 flex items-center">
+        <a href="{{ route('xss') }}" class="text-gray-700 font-semibold text-2xl font-mono flex items-center">
+            <span class="text-3xl mr-2">&#8592;</span> <!-- Big back sign -->
+            XSS Types Menu
+        </a>
+    </div>
 
         <hr class="my-2 border-blue-800">
         <h1 class="text-2xl font-bold mb-4 text-gray-800 pl-24">Practice Section</h1>
