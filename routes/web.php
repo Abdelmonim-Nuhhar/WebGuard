@@ -76,12 +76,14 @@ Route::post('/storedXSS/high', [VulnerabilityController::class, 'storeHighLevelC
 Route::get('/storedXSS/impossible', [VulnerabilityController::class, 'showImpossibleLevelForm'])->name('storedXSS.impossible');
 Route::post('/storedXSS/impossible', [VulnerabilityController::class, 'storeImpossibleLevelComment'])->name('storedXSS.storeImpossible');
 
+// Dom-XSS
+Route::get('/domXSS/low', [VulnerabilityController::class, 'showDOMXSSLowLevelForm'])->name('domXSS.low');
+
 
 Route::post('/guestbook/clear', [VulnerabilityController::class, 'clearGuestbook'])->name('guestbook.clear');
 
 
 
-Route::get('/xss/dom', [VulnerabilityController::class, 'domXSS'])->name('xss.dom');
 
 
 

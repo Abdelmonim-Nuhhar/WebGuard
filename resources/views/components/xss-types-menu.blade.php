@@ -120,9 +120,9 @@
 
             <div class="flex justify-center ">
                 <div class="m-5 w-80 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl bg-blue-400 border-blue-400 p-4 mb-2 hover:bg-blue-300">
-                    <button href="#" class="text-gray-900 p-8 font-semibold text-xl font-mono">
+                    <a href="{{ route('domXSS.low') }}" class="text-gray-900 p-8 font-semibold text-xl font-mono">
                         Dom  Low 
-                    </button>
+                        </a>
                 </div>
             </div>
 
