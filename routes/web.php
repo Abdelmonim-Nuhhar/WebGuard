@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VulnerabilityController;
+use App\Http\Controllers\CustomerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -81,6 +82,12 @@ Route::get('/domXSS/low', [VulnerabilityController::class, 'showDOMXSSLowLevelFo
 
 
 Route::post('/guestbook/clear', [VulnerabilityController::class, 'clearGuestbook'])->name('guestbook.clear');
+
+
+
+//SQL 
+Route::get('/search', [CustomerController::class, 'showSearchForm'])->name('customer.showSearchForm');
+Route::post('/search', [CustomerController::class, 'search'])->name('customer.search');
 
 
 

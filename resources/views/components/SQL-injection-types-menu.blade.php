@@ -47,9 +47,9 @@
         </div>
 
         <div class="challenge-section m-4 rounded-2xl bg-blue-200 border-blue-400 p-6 mb-6 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-lg" id="basicChallenges" style="display: none;">
-            <button class="w-full bg-blue-500 text-white font-bold text-lg py-3 px-5  rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-opacity-50 challenge-btn mb-4 transition ease-in-out duration-150">
+            <a href="{{ route('customer.showSearchForm') }}" class="w-full bg-blue-500 text-white font-bold text-lg py-3 px-5  rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-opacity-50 challenge-btn mb-4 transition ease-in-out duration-150">
             1- Basic SQL 
-            </button>
+            </a>
             <button class="w-full bg-yellow-500 text-white font-bold text-lg py-3 px-5 rounded-lg hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-700 focus:ring-opacity-50 challenge-btn mb-4 transition ease-in-out duration-150">
             2- Error-based SQL
             </button>
