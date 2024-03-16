@@ -14,6 +14,20 @@ class CustomerController extends Controller
         $results = null; // Initialize results variable
         return view('searchForm', ['results' => $results]);
     }
+
+    public function newShowSearchForm()
+
+    {
+        $results = null; // Initialize results variable
+        return view('newSearchForm', ['results' => $results]);
+    }
+
+    public function showResults()
+
+    {
+        $results = null; // Initialize results variable
+        return view('show-result', ['results' => $results]);
+    }
     // Combined method to show the form and handle search
     public function search(Request $request)
     {
@@ -39,6 +53,7 @@ class CustomerController extends Controller
         }
     
         // Return the view, passing the results (which may be null if no search was performed)
-        return view('searchForm', ['results' => $results]);
+        return view('show-results', ['results' => $results]);
+        
     }
 }

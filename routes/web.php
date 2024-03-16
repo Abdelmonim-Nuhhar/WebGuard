@@ -37,6 +37,7 @@ Route::put('/vulnerabilities/{id}/edit', [VulnerabilityController::class, 'updat
 Route::post('/vulnerabilities/{id}', [VulnerabilityController::class, 'show']);
 Route::post('/vulnerabilities/1', [VulnerabilityController::class, 'show'])->name('sessionID');
 Route::post('/vulnerabilities/3', [VulnerabilityController::class, 'show'])->name('xss');
+Route::get('/vulnerabilities/5', [VulnerabilityController::class, 'show'])->name('sql.injections');
 
 
 // Routes for weak session ID vulnerabilities
@@ -86,7 +87,11 @@ Route::post('/guestbook/clear', [VulnerabilityController::class, 'clearGuestbook
 
 
 //SQL 
-Route::get('/search', [CustomerController::class, 'showSearchForm'])->name('customer.showSearchForm');
+Route::get('/search', [CustomerController::class, 'newShowSearchForm'])->name('customer.newShowSearchForm');
+
+Route::get('/search-form', [CustomerController::class, 'showSearchForm'])->name('customer.showSearchForm');
+Route::get('/search/results', [CustomerController::class, 'showResults'])->name('customer.showResults');
+
 Route::post('/search', [CustomerController::class, 'search'])->name('customer.search');
 
 
