@@ -6,12 +6,12 @@
 <div class="flex justify-between">
    
     <!-- XSS Menu Section -->
-    <div class="w-1/3 bg-yellow-100 rounded-2xl mr-4 shadow-md p-1">
+    <div class="w-1/3 bg-gray-200 rounded-2xl mr-4 shadow-md p-1">
     <x-reflectedXSS-levels></x-reflectedXSS-levels>
     </div>
    
      <!-- Practice Section -->
-    <div class="w-2/3 bg-yellow-100 rounded-xl  p-6">
+    <div class="w-2/3 bg-gray-200 rounded-xl  p-6">
         
    <!-- Explanation Section -->
    <div class="text-1g mb-4 bg-white p-4 rounded-2xl font-mono p-2">

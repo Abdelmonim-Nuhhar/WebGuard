@@ -4,16 +4,16 @@
 <div class="flex justify-between space-x-4">
    
     <!-- XSS Menu Section -->
-    <div class="w-1/3 bg-blue-100 rounded-2xl shadow-md p-4">
+    <div class="w-1/3 bg-gray-100 rounded-2xl shadow-md p-4">
         <x-domXSS-levels></x-domXSS-levels> <!-- Assuming you have a similar component for DOM XSS levels -->
     </div>
    
     <!-- Practice Section -->
-    <div class="w-2/3 bg-blue-100 rounded-xl shadow-lg p-6 space-y-6">
+    <div class="w-2/3 bg-gray-200 rounded-xl shadow-lg p-6 space-y-6">
         <h2 class="text-xl font-bold mb-4">DOM-based XSS - Low Level Vulnerability</h2>
         
         <!-- Instructions -->
-        <p class="mb-4">Enter a search term. This example shows how easily JavaScript can be injected and executed due to improper handling of user input within the DOM.</p>
+        <p class="mb-4">Enter a search term (javascript:alert('Dom-base XSS')). This example shows how easily JavaScript can be injected and executed due to improper handling of user input within the DOM.</p>
         
         <!-- Search Input -->
         <div class="bg-white p-4 rounded-lg shadow">

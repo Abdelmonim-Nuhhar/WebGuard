@@ -23,8 +23,8 @@
 
         <hr class="my-2 border-blue-800">
 
-        <div class="m-4 rounded-2xl bg-gray-200 border-gray-300 p-2 mb-6 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-lg">
-            <button id="toggleSqlBasic" class="w-full bg-gray-200 text-gray-800 font-bold text-2xl py-3 px-5 rounded-lgbg-gray-300  p-4 mb-2 hover:bg-gray-200">
+        <div class="m-4 rounded-2xl bg-indigo-400  hover:bg-indigo-300 p-2 mb-6 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-lg">
+            <button id="toggleSqlBasic" class="w-full  text-gray-800 font-bold text-2xl py-3 px-5 rounded-lgbg-gray-300  p-4 mb-2 ">
                 Basic Challenges
             </button>
         </div>
@@ -32,7 +32,7 @@
         <div class="m-2 rounded-lg shadow-lg  border-2 ">
 
             <div class="flex justify-center">
-                <div class="m-5 w-80 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl bg-gray-300  p-4 mb-2 hover:bg-gray-300">
+                <div class="m-5 w-80 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl bg-indigo-300  p-4 mb-2 hover:bg-indigo-400">
                     <a href="{{ route('customer.showSearchForm') }}" class="text-gray-900 p-8 font-semibold text-xl font-mono">
                         1- Basic SQL
                     </a>
@@ -40,7 +40,7 @@
             </div>
 
             <div class="flex justify-center">
-                <div class="m-5 w-80 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl bg-gray-300  p-4 mb-2 hover:bg-gray-200">
+                <div class="m-5 w-80 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl bg-indigo-300  p-4 mb-2 hover:bg-indigo-400">
                     <a href="{{ route('customer.newShowSearchForm') }}" class="text-black p-8 font-semibold text-xl font-mono">
                         2- Beyond Basic
                     </a>
@@ -48,7 +48,7 @@
             </div>
 
             <div class="flex justify-center">
-                <div class="m-5 w-80 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl bg-gray-300  p-4 mb-2 hover:bg-gray-200">
+                <div class="m-5 w-80 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl bg-indigo-300  p-4 mb-2 hover:bg-indigo-400">
                     <a href="" class="text-gray-900 p-8 font-semibold text-xl font-mono">
                         3- Blind SQL
                     </a>
@@ -56,7 +56,7 @@
             </div>
 
             <div class="flex justify-center">
-                <div class="m-5 w-80 transition-transform transform hover:scale-110 focus:scale-110 shadow-xl rounded-2xl bg-gray-300 border-blue-100 p-4 mb-2 hover:bg-gray-300">
+                <div class="m-5 w-80 transition-transform transform hover:scale-110 focus:scale-110 shadow-xl rounded-2xl bg-indigo-300  p-4 mb-2 hover:bg-indigo-400">
                     <a href="" class="text-gray-800 p-8 font-semibold text-xl font-mono">
                         4- SQL Injection
                     </a>
