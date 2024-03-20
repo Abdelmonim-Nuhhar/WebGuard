@@ -56,4 +56,25 @@ class CustomerController extends Controller
         return view('show-results', ['results' => $results]);
         
     }
+
+////USERS 
+
+public function searchUsers(Request $request)
+{
+    $name = $request->input('name');
+
+    // Vulnerable SQL query
+    $query = "SELECT * FROM users WHERE name = '" . $name . "'";
+    $users = DB::select(DB::raw($query));
+
+    return view('show-results', compact('users'));
+}
+
+public function showUsersEditForm()
+
+{
+    $results = null; // Initialize results variable
+    return view('users-edit', ['results' => $results]);
+}
+
 }

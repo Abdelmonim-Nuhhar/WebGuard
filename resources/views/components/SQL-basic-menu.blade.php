@@ -57,7 +57,7 @@
 
             <div class="flex justify-center">
                 <div class="m-5 w-80 transition-transform transform hover:scale-110 focus:scale-110 shadow-xl rounded-2xl bg-indigo-300  p-4 mb-2 hover:bg-indigo-400">
-                    <a href="" class="text-gray-800 p-8 font-semibold text-xl font-mono">
+                    <a href="{{ route('vulnerable.login') }}" class="text-gray-800 p-8 font-semibold text-xl font-mono">
                         4- SQL Injection
                     </a>
                 </div>

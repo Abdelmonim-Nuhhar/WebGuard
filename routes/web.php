@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VulnerabilityController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\AuthController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -102,6 +104,11 @@ Route::get('/search/results', [CustomerController::class, 'showResults'])->name(
 Route::post('/search', [CustomerController::class, 'search'])->name('customer.search');
 
 
+// Route for the vulnerable login form
+Route::get('/vulnerable-login', [AuthController::class, 'vulnerableLoginForm'])->name('vulnerable.login');
+
+// Route to handle the vulnerable login submission
+Route::post('/vulnerable-login', [AuthController::class, 'vulnerableLogin'])->name('vulnerable.login.submit');
 
 
 
@@ -117,5 +124,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
 
 require __DIR__.'/auth.php';

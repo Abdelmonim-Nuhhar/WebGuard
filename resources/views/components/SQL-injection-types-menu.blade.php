@@ -56,7 +56,7 @@
             <a href="{{ route('customer.newShowSearchForm') }}" class="w-full bg-indigo-300 text-black font-bold text-lg py-3 px-5 rounded-lg hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 challenge-btn mb-4 transition ease-in-out duration-150 block">
                 3- Blind SQL
             </a>
-            <a href="{{ route('customer.newShowSearchForm') }}" class="w-full bg-indigo-300 text-black font-bold text-lg py-3 px-5 rounded-lg hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 challenge-btn mb-4 transition ease-in-out duration-150 block">
+            <a href="{{ route('vulnerable.login') }}" class="w-full bg-indigo-300 text-black font-bold text-lg py-3 px-5 rounded-lg hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 challenge-btn mb-4 transition ease-in-out duration-150 block">
                 4- SQL Injection
             </a>
           

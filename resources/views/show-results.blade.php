@@ -26,6 +26,10 @@
     @else
         <p class="text-red-600 font-mono text-2xl">No results found.</p>
     @endif
+
+
+
+
     </div>
 </div>
 @endsection
