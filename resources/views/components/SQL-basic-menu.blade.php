@@ -14,7 +14,7 @@
         <div class="m-5 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl p-4 rounded-2xl bg-red-200 border-blue-300 flex items-center">
             <a href="{{ route('sql.injections') }}" class="text-gray-700 font-semibold text-2xl font-mono flex items-center">
                 <span class="text-3xl mr-2">&#8592;</span> <!-- Big back sign -->
-                SQL Challenges
+                Introduction to SQL
             </a>
         </div>
 
@@ -25,7 +25,7 @@
 
         <div class="m-4 rounded-2xl bg-indigo-400  hover:bg-indigo-300 p-2 mb-6 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-lg">
             <button id="toggleSqlBasic" class="w-full  text-gray-800 font-bold text-2xl py-3 px-5 rounded-lgbg-gray-300  p-4 mb-2 ">
-                Basic Challenges
+            Challenges Menu
             </button>
         </div>
 

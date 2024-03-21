@@ -3,7 +3,7 @@
 @section('content')
 <div class="flex justify-center items-start space-x-4 p-10">
    
-    <!-- XSS Menu Section -->
+    <!-- SQL Menu Section -->
     <div class="w-1/3 bg-white rounded-2xl shadow-md p-4">
         <x-SQL-basic-menu></x-SQL-basic-menu>
     </div>

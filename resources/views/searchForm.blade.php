@@ -3,7 +3,7 @@
 @section('content')
 <div class="flex justify-center items-start space-x-4 p-10">
    
-    <!-- XSS Menu Section -->
+    <!-- SQL Menu Section -->
     <div class="w-1/3  rounded-2xl shadow-md p-4">
         <x-sql-basic-menu></x-sql-basic-menu>
     </div>
@@ -41,10 +41,10 @@
 
                 <p>
                           To assess if a field is vulnerable to SQL injection, attackers often attempt to inject basic
-                           SQL code such as '1''. If the field is vulnerable, 
+                           SQL code such as( '1 ). If the field is vulnerable, 
                           the application may display SQL errors, indicating the presence of a SQL injection vulnerability.
                           </p>
-                    <p>In the scenario of a user ID input field, entering the string '1' OR '1'='1' can manipulate 
+                    <p>In the scenario of a user ID input field, entering the string <code> ( A'!='1@1.1  )</code> can manipulate 
                         the SQL query to return all records from the customers table. This manipulation effectively
                          bypasses any user authentication checks, granting unauthorized access to sensitive information."</p>
                 </div>

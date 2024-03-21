@@ -84,9 +84,15 @@
     This tactic checks the database for admin users, signaling a possible blind SQL injection vulnerability. Such a flaw might be leveraged to circumvent authentication on susceptible login forms,
     as detailed earlier in this lesson on SQL injection.</p>
 
-    <p class="text-gray-800 font-mono">3. The payload <code class="font-bold">(admin' AND SLEEP(10) AND '1'='1')</code>
+    <p class="text-gray-800 font-mono">3. The payload <code class="font-bold">( admin' AND SLEEP(10) AND '1'='1 )</code>
     directs the database to pause for 5 seconds if the query is altered successfully. This pause is a telltale sign of 
-    a successful query manipulation, indicating a susceptibility to blind SQL injection.</p>
+    a successful query manipulation, indicating a susceptibility to blind SQL injection.
+
+    <span class="bg-gray-200  font-bold">
+    This code potentially cause a denial of service (DoS) attack, depending on the configuration of the database server and the impact of the SLEEP function.
+    </span>
+
+</p>
 </div>
 
     </div>
