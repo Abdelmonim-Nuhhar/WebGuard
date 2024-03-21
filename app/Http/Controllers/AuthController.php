@@ -43,6 +43,48 @@ public function vulnerableLogin(Request $request)
 }
 
 
+public function blindForm()
+    {
+        // Return a view with a form where users can input their guess
+        return view('blind-form');
+    }
+/*
+    public function blindSqlChallenge(Request $request)
+    {
+        $userId = $request->input('userId');
+        
+        // A vulnerable query simulating a blind SQL injection scenario
+        $query = "SELECT * FROM users WHERE id = $userId AND (SELECT 1 FROM users WHERE email LIKE 'admin%') = 1";
+        $user = DB::select($query);
+        
+        if (!empty($user)) {
+            // The challenge is to determine if there's an admin user without directly retrieving any data
+            return back()->with('success', 'Yes, there is an admin user!');
+        } else {
+            return back()->with('error', 'No admin user found.');
+        }
+    }
+*/
+
+public function blindChallenge(Request $request)
+{
+    $name = $request->input('username'); // Hypothetical user input
+
+    // Vulnerable SQL query incorporating user input
+    $query = "SELECT * FROM users WHERE name = '" . $name . "' AND is_admin = 1";
+
+    $user = DB::select($query);
+
+    if (!empty($user)) {
+        return back()->with('success', 'Yes, there is at least one admin user!');
+    } else {
+        return back()->with('error', 'No admin user found.');
+    }
+}
+
+
+
+
 
 
 
