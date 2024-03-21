@@ -127,18 +127,3 @@
 
 </div>
 @endsection
-
-<script>
-function toggleSourceCode() {
-    var codePart = document.getElementById("codePart");
-    var toggleSourceButton = document.getElementById("toggleSourceButton");
-
-    if (codePart.style.display === "none") {
-        codePart.style.display = "block";
-        toggleSourceButton.textContent = "Hide Source Code";
-    } else {
-        codePart.style.display = "none";
-        toggleSourceButton.textContent = "Toggle Source Code";
-    }
-}
-</script>
