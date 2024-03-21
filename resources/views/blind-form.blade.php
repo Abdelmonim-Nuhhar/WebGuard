@@ -13,7 +13,7 @@
    
     <!-- Login Form Section -->
     <div class=" md:w-1/3 container  px-4 py-8 bg-white rounded-2xl">
-    <h2 class="text-2xl font-bold mb-4 font-mono bg-gray-100 rounded-2xl p-2">Blind SQL Injection Challenge</h2>
+    <h2 class="text-2xl font-bold mb-4 font-mono bg-gray-100 rounded-2xl p-2">Vulnerable To Blind SQL injection</h2>
     
     {{-- Display Success Message --}}
     @if(session('success'))
@@ -40,6 +40,9 @@
     </form>
     </div>
 
+
+
+
     <div class="bg-gray-100 mt-2 rounded-2xl shadow-lg p-6 mb-6">
             <h2 class="text-2xl font-bold mb-4 font-mono">Note:</h2>
 
@@ -51,14 +54,24 @@
             input validation, to protect applications from such attacks.  </p>
 
             <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4 font-mono" role="alert">
-            <span class="block sm:inline">Performing these actions on systems without permission is illegal and unethical.</span>
-        </div>
+                <span class="block sm:inline">Performing these actions on systems without permission is illegal and unethical.</span>
+            </div>
+
+            <div class="m-5 w-80 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl bg-green-600  p-2 font-bold mb-2 hover:bg-green-700">
+                    <a href="{{ route('secureBlind.form') }}" class="text-white p-8   font-mono">
+                    Mitigating Vulnerabilities
+                    </a>
+                </div>
             
         </div>
+
+
 </div>
     <!-- Educational Content Section -->
     <div class="md:w-1/2">
         <div class="bg-white rounded-2xl shadow-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold mb-4 font-mono bg-gray-100 rounded-2xl p-2">Blind SQL Injection Challenge</h2>
+
             <h2 class="text-2xl font-bold mb-4 font-mono">Why Blind </h2>
 
             

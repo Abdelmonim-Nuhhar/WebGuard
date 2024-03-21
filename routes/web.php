@@ -114,6 +114,11 @@ Route::post('/vulnerable-login', [AuthController::class, 'vulnerableLogin'])->na
 Route::get('/blind-challenge', [AuthController::class, 'blindForm'])->name('blind.form');
 Route::post('/blind-challenge', [AuthController::class, 'blindChallenge'])->name('blind.challenge');
 
+Route::get('/secure-blind-challenge', [AuthController::class, 'secureBlindForm'])->name('secureBlind.form');
+Route::post('/secure-blind-challenge', [AuthController::class, 'secureblindChallenge'])->name('secureBlind.challenge');
+
+
+
 
 
 

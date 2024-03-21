@@ -48,23 +48,6 @@ public function blindForm()
         // Return a view with a form where users can input their guess
         return view('blind-form');
     }
-/*
-    public function blindSqlChallenge(Request $request)
-    {
-        $userId = $request->input('userId');
-        
-        // A vulnerable query simulating a blind SQL injection scenario
-        $query = "SELECT * FROM users WHERE id = $userId AND (SELECT 1 FROM users WHERE email LIKE 'admin%') = 1";
-        $user = DB::select($query);
-        
-        if (!empty($user)) {
-            // The challenge is to determine if there's an admin user without directly retrieving any data
-            return back()->with('success', 'Yes, there is an admin user!');
-        } else {
-            return back()->with('error', 'No admin user found.');
-        }
-    }
-*/
 
 public function blindChallenge(Request $request)
 {
@@ -82,6 +65,29 @@ public function blindChallenge(Request $request)
     }
 }
 
+public function secureBlindForm()
+    {
+        // Return a view with a form where users can input their guess
+        return view('secure-blind-form');
+    }
+
+public function secureBlindChallenge(Request $request)
+{
+    $name = $request->input('username'); // User input
+    $fileContent = file_get_contents('C:\Users\Hilmee\PP\web-guard\files\medium_level_source_code.txt');
+
+    // Secure query using Laravel's query builder
+    $user = DB::table('users')
+              ->where('name', '=', $name)
+              ->where('is_admin', '=', 1)
+              ->first();
+
+    if ($user) {
+        return back()->with('success', 'Yes, there is at least one admin user!');
+    } else {
+        return back()->with('error', 'No admin user found.');
+    }
+}
 
 
 
