@@ -1,3 +1,9 @@
+{{-- Extend the base layout --}}
+@extends('layouts.new-app')
+
+{{-- Start the section for the login content --}}
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,11 +32,10 @@
             margin: 10px;
             padding: 20px;
             border-radius: 10px;
-            transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             height: 300px;
             overflow: hidden;
             position: relative;
-            cursor: pointer; /* Indicates the item is interactive */
         }
         .news-article::before {
             content: "";
@@ -42,14 +47,14 @@
             background: rgba(0, 0, 0, 0.5);
             border-radius: 10px;
             z-index: 1;
-            transition: background 0.5s ease-in-out; /* Smooth transition for the overlay */
+            transition: background 0.2s ease-in-out;
         }
         .news-article:hover {
-            transform: scale(1.03); /* Slightly larger scale on hover */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
         .news-article:hover::before {
-            background: rgba(0, 0, 0, 0.7); /* Darker overlay on hover for contrast */
+            background: rgba(0, 0, 0, 0.7);
         }
         .news-article h2, .news-article p, .news-article a {
             position: relative;
@@ -59,10 +64,10 @@
         .news-article a {
             color: #adff2f;
             text-decoration: none;
-            transition: color 0.3s ease-in-out; /* Smooth color transition for the link */
+            transition: color 0.3s ease-in-out;
         }
         .news-article a:hover {
-            color: #fff; /* Change link color on hover */
+            color: #fff;
         }
     </style>
 </head>
@@ -72,9 +77,8 @@
         @foreach($news as $article)
             @php
                 $imageUrl = $article['image']['thumbnail']['contentUrl'] ?? null;
-                $backgroundImage = $imageUrl ? "background-image: url('{$imageUrl}');" : '';
             @endphp
-            <div class="news-article" style="{{ $backgroundImage }}">
+            <div class="news-article" style="background-image: url('{{ $imageUrl }}');">
                 <h2>{{ $article['name'] }}</h2>
                 <p>{{ $article['description'] }}</p>
                 <a href="{{ $article['url'] }}" target="_blank">Read more</a>
@@ -83,3 +87,6 @@
     </div>
 </body>
 </html>
+
+{{-- End the section for the login content --}}
+@endsection

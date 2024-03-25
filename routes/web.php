@@ -120,7 +120,7 @@ Route::post('/secure-blind-challenge', [AuthController::class, 'secureblindChall
 
 
 // Live news
-Route::get('/news', [NewsController::class, 'indexNews']);
+Route::get('/news', [NewsController::class, 'indexNews'])->name('live.news');;
 
 
 
