@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VulnerabilityController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\NewsController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -118,7 +119,8 @@ Route::get('/secure-blind-challenge', [AuthController::class, 'secureBlindForm']
 Route::post('/secure-blind-challenge', [AuthController::class, 'secureblindChallenge'])->name('secureBlind.challenge');
 
 
-
+// Live news
+Route::get('/news', [NewsController::class, 'indexNews']);
 
 
 
