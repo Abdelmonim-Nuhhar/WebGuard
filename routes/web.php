@@ -44,6 +44,7 @@ Route::post('/vulnerabilities/{id}', [VulnerabilityController::class, 'show']);
 Route::post('/vulnerabilities/1', [VulnerabilityController::class, 'show'])->name('sessionID');
 Route::post('/vulnerabilities/3', [VulnerabilityController::class, 'show'])->name('xss');
 Route::get('/vulnerabilities/5', [VulnerabilityController::class, 'show'])->name('sql.injections');
+Route::get('/vulnerabilities/6', [VulnerabilityController::class, 'show'])->name('file.upload');
 
 
 // Routes for weak session ID vulnerabilities
