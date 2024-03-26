@@ -6,6 +6,9 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\NewsController;
 
+use App\Http\Controllers\FileUploadController;
+
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -117,6 +120,23 @@ Route::post('/blind-challenge', [AuthController::class, 'blindChallenge'])->name
 
 Route::get('/secure-blind-challenge', [AuthController::class, 'secureBlindForm'])->name('secureBlind.form');
 Route::post('/secure-blind-challenge', [AuthController::class, 'secureblindChallenge'])->name('secureBlind.challenge');
+
+// a Route for File Upload
+Route::get('/upload/basic', [FileUploadController::class, 'showUploadForm'])->name('upload.form');
+Route::post('/upload', [FileUploadController::class, 'uploadBasic'])->name('upload.basic');
+
+// Beyond basic upload form and processing with basic validation
+Route::get('/upload/beyond-basic', [FileUploadController::class, 'showBeyondBasicUploadForm'])->name('upload.beyondBasicform');
+Route::post('/upload/beyond-basic', [FileUploadController::class, 'uploadBeyondBasic'])->name('upload.beyond_basic');
+
+
+// Intermediate upload
+Route::get('/upload/intermediate', [FileUploadController::class, 'showIntermediateUploadForm']);
+Route::post('/upload/intermediate', [FileUploadController::class, 'uploadIntermediate'])->name('upload.intermediate');
+
+// Advanced upload
+Route::get('/upload/advanced', [FileUploadController::class, 'showAdvancedUploadForm']);
+Route::post('/upload/advanced', [FileUploadController::class, 'uploadAdvanced'])->name('upload.advanced');
 
 
 // Live news
