@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class FileUploadController extends Controller
 {
     // Show upload forms
-    public function showBasicUploadForm() 
+    public function showUploadForm() 
     { 
         return view('upload-basic'); 
     }

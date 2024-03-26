@@ -126,16 +126,16 @@ Route::get('/upload/basic', [FileUploadController::class, 'showUploadForm'])->na
 Route::post('/upload', [FileUploadController::class, 'uploadBasic'])->name('upload.basic');
 
 // Beyond basic upload form and processing with basic validation
-Route::get('/upload/beyond-basic', [FileUploadController::class, 'showBeyondBasicUploadForm'])->name('upload.beyondBasicform');
+Route::get('/upload/beyond-basic', [FileUploadController::class, 'showBeyondBasicUploadForm'])->name('upload.beyond.basic.form');
 Route::post('/upload/beyond-basic', [FileUploadController::class, 'uploadBeyondBasic'])->name('upload.beyond_basic');
 
 
 // Intermediate upload
-Route::get('/upload/intermediate', [FileUploadController::class, 'showIntermediateUploadForm']);
+Route::get('/upload/intermediate', [FileUploadController::class, 'showIntermediateUploadForm'])->name('upload.intermediate.form');
 Route::post('/upload/intermediate', [FileUploadController::class, 'uploadIntermediate'])->name('upload.intermediate');
 
 // Advanced upload
-Route::get('/upload/advanced', [FileUploadController::class, 'showAdvancedUploadForm']);
+Route::get('/upload/advanced', [FileUploadController::class, 'showAdvancedUploadForm'])->name('upload.advanced.form');
 Route::post('/upload/advanced', [FileUploadController::class, 'uploadAdvanced'])->name('upload.advanced');
 
 
