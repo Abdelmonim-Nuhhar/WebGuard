@@ -1,22 +1,20 @@
-@extends('layouts.new-app') <!-- Extend main layout -->
+@extends('layouts.new-app')
 
 @section('content')
-<div class="flex justify-center items-start space-x-4 p-10">
-   
-    <!-- SQL Menu Section -->
-    <div class="w-1/3 bg-white rounded-2xl shadow-md p-4">
-        <x-SQL-basic-menu></x-SQL-basic-menu>
+<div class="flex justify-center items-start space-x-4 p-6">
+
+    <div class="w-1/3 bg-white rounded-lg shadow-md p-4">
+        <x-SQL-basic-menu> 2-Beyond Basic</x-SQL-basic-menu>
     </div>
-   
-    <!-- Practice Section -->
-    <div class="w-2/3 bg-gray-00 rounded-xl shadow-lg p-6 space-y-6">
-        <form method="POST" action="{{ route('customer.search') }}" class="space-y-4 bg-white p-4 rounded-2xl">
+
+    <div class="w-2/3 bg-gray-00 rounded-xl shadow-lg p-6 space-y-4">
+        <form method="POST" action="{{ route('customer.search') }}" class="space-y-4 bg-white p-4 rounded-lg">
             @csrf
             <div>
-                <label for="id" class="block text-2xl  font-semibold font-mono text-gray-700">Select Customer ID:</label>
-                <select name="id" id="id" class="mt-1 block w-full  p-4 font-mono text-2xl border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-2xl">
+                <label for="id" class="block text-lg font-semibold font-mono text-gray-700">Select Customer ID:</label>
+                <select name="id" id="id" class="mt-1 block w-full p-2 font-mono text-lg border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 rounded-lg">
                     @for ($i = 9; $i <= 16; $i++)
-                        <option class="text-2xl" value="{{ $i }}">{{ $i }}</option>
+                        <option class="text-lg" value="{{ $i }}">{{ $i }}</option>
                     @endfor
                 </select>
             </div>
@@ -25,30 +23,15 @@
             </div>
         </form>
 
-        <p class="mb-2 text-2xl ">Beyond Basic:</p>
-                <div class=" mb-2 bg-white p-4 rounded-2xl font-mono text-gl">
-                    <p>At this level of security, measures have been implemented to mitigate SQL
-                         injection vulnerabilities. The input field has been replaced with a dropdown list,
-                          making it challenging for attackers to directly insert SQL injection attacks. 
-                          Instead, attackers may resort to using web proxies like ZAP to bypass the frontend 
-                          restrictions and exploit potential vulnerabilities.
+        <p class="mb-2 text-lg">Beyond Basic:</p>
+        <div class="bg-white p-4 rounded-lg font-mono">
+            <p>At this level of security, measures have been implemented to mitigate SQL injection vulnerabilities. The input field has been replaced with a dropdown list, making it challenging for attackers to directly insert SQL injection attacks. Instead, attackers may resort to using web proxies like ZAP to bypass the frontend restrictions and exploit potential vulnerabilities.</p>
+        </div>
 
-                    </p>
-                          <br>
-                          <br>
-
-                </div>
-
-                <p class="mb-2 text-2xl ">ZAPping Through Security:</p>
-                <div class="text-1g mb-2 bg-white font-mono text-gl p-4 rounded-2xl">
-
-                <p>
-                To test for vulnerabilities, an attacker can utilize tools like ZAP.
-                 By entering '1' into the dropdown list, the attacker can check for SQL errors. 
-                 If the application is vulnerable, SQL errors will be displayed. Additionally, 
-                attackers can employ the same code used in previous attacks to exploit any identified vulnerabilities</p>
-                </div>
-
+        <p class="mb-2 text-lg">ZAPping Through Security:</p>
+        <div class="bg-white p-4 rounded-lg font-mono">
+            <p>To test for vulnerabilities, an attacker can utilize tools like ZAP. By entering '1' into the dropdown list, the attacker can check for SQL errors. If the application is vulnerable, SQL errors will be displayed. Additionally, attackers can employ the same code used in previous attacks to exploit any identified vulnerabilities.</p>
+        </div>
     </div>
 </div>
 @endsection

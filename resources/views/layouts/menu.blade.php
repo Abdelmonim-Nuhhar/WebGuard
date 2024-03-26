@@ -13,7 +13,7 @@
 
     @can('create', App\Models\Vulnerability::class)
     <div class="m-5 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-md bg-indigo-600 border-blue-300 p-2">
-        <a href="{{ route('index') }}" class="text-white p-5 font-semibold text-xl font-mono">
+        <a href="{{ route('index') }}" class="text-white p-4 font-semibold text-xl font-mono">
             Edit L-Hub
         </a>
     </div>
@@ -26,12 +26,12 @@
                     Add Vulnerability
                 </a>
             @else
-                <a href="{{ route('index') }}" class="text-gray-100 p-8 font-semibold text-2xl font-mono">
+                <a href="{{ route('index') }}" class="text-gray-100 p-4 font-semibold text-xl font-mono">
                     Learning Hub
                 </a>
             @endcan
         @else
-            <a href="{{ route('login') }}" class="text-gray-100 p-8 font-semibold text-2xl font-mono">
+            <a href="{{ route('login') }}" class="text-gray-100 p-4 font-semibold text-xl font-mono">
                 Learning Hub
             </a>
         @endauth
@@ -40,7 +40,7 @@
     @auth
         @cannot('create', App\Models\Vulnerability::class)
             <div class="m-5 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-lg bg-indigo-600 border-blue-300">
-                <a href="{{ route('showFlagSubmissionForm') }}" class="text-gray-100 p-8 font-semibold text-2xl font-mono">
+                <a href="{{ route('showFlagSubmissionForm') }}" class="text-gray-100 p-4 font-semibold text-2xl font-mono">
                     Flags/Dashboard
                 </a>
             </div>
@@ -60,7 +60,7 @@
     </div>
 
     <div class="m-5 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-lg bg-indigo-600 border-blue-300">
-        <a href="{{ route('live.news') }}" class="text-gray-100 p-5 font-semibold text-2xl font-mono">
+        <a href="{{ route('live.news') }}" class="text-gray-100 p-5 font-semibold text-xl font-mono">
             Live News
         </a>
     </div>

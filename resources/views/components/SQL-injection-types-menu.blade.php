@@ -19,40 +19,38 @@
         .challenge-section {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 5px; /* Reduced gap */
         }
     </style>
 </head>
 <body>
 
-<div class="p-4 m-2 rounded-lg shadow-lg bg-gray-200 border-1 border-gray-300 font-mono mb-8 text-gray-800">
-    <div class="bg-white p-3 mb-4 rounded-2xl ">
-        <hr class="my-2 border-blue-800">
-        <h1 class="text-2xl font-bold mb-4 text-gray-800 pl-24">Practice Section</h1>
+<div class="p-2 m-1 rounded-lg shadow bg-gray-200 border border-gray-300 font-mono mb-4 text-gray-800">
+    <div class="bg-white p-2 mb-2 rounded-xl">
+        <hr class="my-1 border-blue-800">
+        <h1 class="text-lg font-bold mb-2 text-gray-800 pl-8">Practice Section</h1>
 
+        <hr class="my-1 border-blue-800">
 
-
-        <hr class="my-2 border-blue-800">
-
-        <div class="m-4 rounded-2xl bg-indigo-400 border-indigo-300  hover:bg-indigo-300 p-2 mb-6 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-lg">
-            <button id="toggleSqlBasicButton" class="w-full  text-black font-bold text-2xl py-3 px-5 rounded-lg  p-4 mb-2 challenge-btn">
+        <div class="m-2 rounded-lg bg-indigo-400 border-indigo-300 hover:bg-indigo-300 p-1 mb-4 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105 shadow">
+            <button id="toggleSqlBasicButton" class="w-full text-black font-bold text-lg py-2 px-3 rounded-lg p-2 mb-1 challenge-btn">
                Challenges Menu
             </button>
-            <button id="basicBtnStatus" class="text-sm ml-2 text-gray-700"></button>
+            <button id="basicBtnStatus" class="text-xs ml-1 text-gray-700"></button>
         </div>
 
-        <div class="challenge-section m-4 rounded-2xl bg-gray-100 border-gray-300 p-6 mb-6 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-lg" >
-            <a href="{{ route('customer.showSearchForm') }}" class="w-full bg-indigo-300 text-black font-bold text-lg py-3 px-5 rounded-lg hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 challenge-btn mb-4 transition ease-in-out duration-150 block">
+        <div class="challenge-section m-2 rounded-xl bg-gray-100 border-gray-300 p-4 mb-4 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105 shadow">
+            <a href="{{ route('customer.showSearchForm') }}" class="w-full bg-indigo-300 text-black font-bold text-sm py-2 px-3 rounded-lg hover:bg-indigo-400 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:ring-opacity-50 challenge-btn mb-2 transition ease-in-out duration-150 block">
                 1- Basic SQL
             </a>
-            <a href="{{ route('customer.newShowSearchForm') }}" class="w-full bg-indigo-300 text-black font-bold text-lg py-3 px-5 rounded-lg hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 challenge-btn mb-4 transition ease-in-out duration-150 block">
+            <a href="{{ route('customer.newShowSearchForm') }}" class="w-full bg-indigo-300 text-black font-bold text-sm py-2 px-3 rounded-lg hover:bg-indigo-400 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:ring-opacity-50 challenge-btn mb-2 transition ease-in-out duration-150 block">
                 2- Beyond Basic
             </a>
 
-            <a href="{{ route('blind.form') }}" class="w-full bg-indigo-300 text-black font-bold text-lg py-3 px-5 rounded-lg hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 challenge-btn mb-4 transition ease-in-out duration-150 block">
+            <a href="{{ route('blind.form') }}" class="w-full bg-indigo-300 text-black font-bold text-sm py-2 px-3 rounded-lg hover:bg-indigo-400 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:ring-opacity-50 challenge-btn mb-2 transition ease-in-out duration-150 block">
                 3- Blind SQL
             </a>
-            <a href="{{ route('vulnerable.login') }}" class="w-full bg-indigo-300 text-black font-bold text-lg py-3 px-5 rounded-lg hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 challenge-btn mb-4 transition ease-in-out duration-150 block">
+            <a href="{{ route('vulnerable.login') }}" class="w-full bg-indigo-300 text-black font-bold text-sm py-2 px-3 rounded-lg hover:bg-indigo-400 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:ring-opacity-50 challenge-btn mb-2 transition ease-in-out duration-150 block">
                 4- SQL Injection
             </a>
           

@@ -20,35 +20,35 @@
 
 <body class="font-sans bg-gray-100">
 
-<header class="flex justify-between items-center border-b-2 border-blue-500 border-gray-300 p-4  shadow-md bg-gray-800 rounded-2xl ">
+<header class="flex justify-between items-center border-b border-blue-500 border-gray-300 p-2  shadow-md bg-gray-800 rounded">
         <div class="flex items-center">
-            <img src="{{ asset('images/LBU.png') }}" alt="logo" class="h-32 w-auto">
-            <h2 class="text-white p-5 font-bold text-4xl font-mono pl-32 font-italic ">Web Guard</h2>
+            <img src="{{ asset('images/LBU.png') }}" alt="logo" class="h-20 w-auto">
+            <h2 class="text-white p-2 font-bold text-2xl font-mono pl-8 font-italic ">Web Guard</h2>
         </div>
 
-        <div class="space-x-4">
+        <div class="space-x-2">
             @auth
             @include('components.settings_dropdown')
             @endauth
             @guest
-            <a href="{{ route('login') }}" class="text-white p-5 font-semibold text-2xl font-mono underline">Login</a>
+            <a href="{{ route('login') }}" class="text-white p-2 font-semibold text-xl font-mono underline">Login</a>
             @if (Route::has('register'))
-            <a href="{{ route('register') }}" class="text-white p-5 font-semibold text-2xl font-mono underline">Register</a>
+            <a href="{{ route('register') }}" class="text-white p-2 font-semibold text-xl font-mono underline">Register</a>
             @endif
             @endguest
         </div>
     </header>
 
-    <main class="border-b-2 border-gray-300 p-8">
+    <main class="border-b border-gray-300 p-4">
         <!-- Menu -->
         @include('layouts.menu')
         @yield('content')
     </main>
 
     {{-- Footer Section --}}
-    <footer class="bg-gray-800 text-white text-center p-4 border-blue-500 border-gray-300   shadow-md bg-gray-800 rounded-2xl">
+    <footer class="bg-gray-800 text-white text-center p-2 border-blue-500 border-gray-300   shadow-md bg-gray-800 rounded">
         {{-- Include your footer content here --}}
-        <h2 class="text-white p-5 font-bold text-2xl font-mono pl-32 font-italic "> &copy; {{ date('Y') }} Web Guard Vulnerabilities. All rights reserved.</h2>
+        <h2 class="text-white p-2 font-bold text-xl font-mono pl-8 font-italic "> &copy; {{ date('Y') }} Web Guard Vulnerabilities. All rights reserved.</h2>
     </footer>
 
 </body>
