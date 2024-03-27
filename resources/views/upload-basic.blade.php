@@ -22,7 +22,7 @@
         <div class="bg-red-100 text-red-800 px-4 py-2 rounded-md" role="alert">{{ session('error') }}</div>
     @endif
 
-    <form action="{{ route('upload.basic') }}" method="POST" enctype="multipart/form-data" class="space-y-4 bg-gray-200 rounded-2xl p-4">
+    <form action="{{ route('upload.basic') }}" method="POST" enctype="multipart/form-data" class="space-y-4 bg-gray-200 rounded-2xl p-4 mt-2">
         @csrf
         <input type="file" name="file" class="block w-full text-sm text-green-700
         file:mr-4 file:py-2 file:px-4

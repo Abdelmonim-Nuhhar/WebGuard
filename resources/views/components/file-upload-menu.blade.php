@@ -53,6 +53,13 @@
                         <a href="{{ route('upload.advanced.form') }}" class="text-black p-2 font-semibold text-md font-mono">4- Advanced</a>
                     </div>
                 </div>
+
+                <div class="flex justify-center">
+                    <div class="m-2 w-72 transition-transform transform hover:scale-110 focus:scale-110 shadow-xl rounded-2xl bg-indigo-200 p-2 mb-1 hover:bg-indigo-300">
+                        <a href="{{ route('upload.file.challeng') }}" class="text-black p-2 font-semibold text-md font-mono">5-File Upload Challenge </a>
+                    </div>
+                </div>   
+                
             </div>
         </div>
     </div>

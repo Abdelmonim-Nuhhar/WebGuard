@@ -40,11 +40,7 @@ Route::delete('/vulnerabilities/{id}', [VulnerabilityController::class, 'destroy
 Route::get('/vulnerabilities/{id}/edit', [VulnerabilityController::class, 'edit'])-> name('edit');
 Route::put('/vulnerabilities/{id}/edit', [VulnerabilityController::class, 'update'])-> name('update');
 
-Route::post('/vulnerabilities/{id}', [VulnerabilityController::class, 'show']);
-Route::post('/vulnerabilities/1', [VulnerabilityController::class, 'show'])->name('sessionID');
-Route::post('/vulnerabilities/3', [VulnerabilityController::class, 'show'])->name('xss');
-Route::get('/vulnerabilities/5', [VulnerabilityController::class, 'show'])->name('sql.injections');
-Route::get('/vulnerabilities/6', [VulnerabilityController::class, 'show'])->name('file.upload');
+
 
 
 // Routes for weak session ID vulnerabilities
@@ -62,7 +58,6 @@ Route::post('/vulnerabilities/weak_session/impossible', [VulnerabilityController
 
 
 // Routes for flags submisson
-Route::get('/showFlagSubmissionForm', [VulnerabilityController::class, 'showFlagSubmissionForm'])->name('showFlagSubmissionForm');
 
 Route::post('/showFlagSubmissionForm', [VulnerabilityController::class, 'submitFlag'])->name('submitFlag');
 
@@ -122,6 +117,16 @@ Route::post('/blind-challenge', [AuthController::class, 'blindChallenge'])->name
 Route::get('/secure-blind-challenge', [AuthController::class, 'secureBlindForm'])->name('secureBlind.form');
 Route::post('/secure-blind-challenge', [AuthController::class, 'secureblindChallenge'])->name('secureBlind.challenge');
 
+// Group routes that require authentication
+Route::middleware(['auth'])->group(function () {
+
+
+Route::get('/vulnerabilities/{id}', [VulnerabilityController::class, 'show']);
+Route::get('/vulnerabilities/1', [VulnerabilityController::class, 'show'])->name('sessionID');
+Route::get('/vulnerabilities/3', [VulnerabilityController::class, 'show'])->name('xss');
+Route::get('/vulnerabilities/5', [VulnerabilityController::class, 'show'])->name('sql.injections');
+Route::get('/vulnerabilities/6', [VulnerabilityController::class, 'show'])->name('file.upload');
+
 // a Route for File Upload
 Route::get('/upload/basic', [FileUploadController::class, 'showUploadForm'])->name('upload.form');
 Route::post('/upload', [FileUploadController::class, 'uploadBasic'])->name('upload.basic');
@@ -138,10 +143,23 @@ Route::post('/upload/intermediate', [FileUploadController::class, 'uploadInterme
 // Advanced upload
 Route::get('/upload/advanced', [FileUploadController::class, 'showAdvancedUploadForm'])->name('upload.advanced.form');
 Route::post('/upload/advanced', [FileUploadController::class, 'uploadAdvanced'])->name('upload.advanced');
+//Upload file Challenge 
+
+Route::get('/upload/challenge', [FileUploadController::class, 'showUplodFileChallenge'])->name('upload.file.challeng');
+Route::get('/upload/congratulations', function () {
+    return view('file-upload-congratulations');
+})->name('file-upload-congratulations');
+
+// Routes for flags submisson
+Route::get('/showFlagSubmissionForm', [VulnerabilityController::class, 'showFlagSubmissionForm'])->name('showFlagSubmissionForm');
 
 
+});
 // Live news
 Route::get('/news', [NewsController::class, 'indexNews'])->name('live.news');;
+
+
+
 
 
 
