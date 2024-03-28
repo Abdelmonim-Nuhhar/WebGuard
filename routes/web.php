@@ -122,6 +122,7 @@ Route::middleware(['auth'])->group(function () {
 
 
 Route::get('/vulnerabilities/{id}', [VulnerabilityController::class, 'show']);
+Route::post('/vulnerabilities/{id}', [VulnerabilityController::class, 'show']);
 Route::get('/vulnerabilities/1', [VulnerabilityController::class, 'show'])->name('sessionID');
 Route::get('/vulnerabilities/3', [VulnerabilityController::class, 'show'])->name('xss');
 Route::get('/vulnerabilities/5', [VulnerabilityController::class, 'show'])->name('sql.injections');

@@ -1,74 +1,74 @@
 @extends('layouts.new-app')
 
 @section('content')
-<section class="py-12 bg-white text-center mb-3 rounded-2xl">
-
-    <!-- Conditional check for user permissions -->
-    @can('create', App\Models\Vulnerability::class)
-        <!-- Admin Welcome Message -->
-        <h3 class="text-2xl font-bold text-blue-800 mb-6 font-mono">Welcome <span class="text-red-500">{{ Auth::user()->name }}</span> you are an administrator</h3>
-        <p class="text-lg font-semibold text-gray-700 mb-6 font-mono">
-            This is the editing page for administrators.
-            <br>Click "Edit" to update or remove a vulnerability.
-        </p>
-    @else
-        <!-- User Welcome Message -->
-        <h2 class="text-4xl font-bold text-blue-800 mb-6 font-mono">Welcome <span class="text-red-600 text-4xl">{{ Auth::user()->name }}</span> This is the Web Vulnerabilities Learning Hub</h2>
-        <p class="text-lg text-gray-600 mb-8">
-            Explore the fascinating world of web vulnerabilities and enhance your understanding of web security.
-            Click on any vulnerability below to learn more about it and discover how to protect against potential threats.
-        </p>
-    @endcan
-
-</section>
-
-<!-- Vulnerabilities Display Section -->
-<section class="contact bg-white py-4 rounded-2xl">
-    <div class="flex flex-wrap justify-center mx-auto">
-        @php $counter = 0 @endphp
-        @foreach($vulnerabilities as $vulnerability)
-            <!-- Check user permissions for vulnerability edit -->
-            @can('create', App\Models\Vulnerability::class)
-                <div class="p-4 m-2 w-full sm:w-1/2 md:w-1/3 flex flex-wrap justify-center mx-auto rounded-2xl shadow-lg bg-gray-200 border-2 border-blue-900 transition-all ease-in-out duration-300 hover:scale-105">
-                   
-                
-                <!-- Edit Button -->
-                    <div class="flex justify-center items-center w-full h-full p-4 transition-transform transform h focus:scale-110 shadow-2xl rounded-2xl bg-white border-blue-900">
-                        <!-- Vulnerability Details -->
-                    <p class="text-gray-700 p-5 font-medium text-base font-mono">
-                    <span class="text-red-600 font-bold text-2xl">{{ $vulnerability->name }}</span>
-                        <br><br>A Vulnerability details are as follows:
-                        <br>
-                        <br>The Vulnerability ID: <span class="text-red-500">{{ $vulnerability->id }}</span>
-                        <br>The name: <span class="text-red-500">{{ $vulnerability->name }}</span>
-                        <br>The description: <span class="text-red-500">{{ $vulnerability->description }}</span>
-                        <br>The severity: <span class="text-red-500">{{ $vulnerability->severity }}</span>
-                        <br>The mitigation could be: <span class="text-red-500">{{ $vulnerability->mitigation }}</span>
-                        <br>The status (1 for fixed, 0 for not fixed): <span class="text-red-500">{{ $vulnerability->is_fixed }}</span>
-                    </p>
-                
-                    <a  href="{{ route('index') . '/' . $vulnerability->id . '/edit'}}" class="text-white font-semibold text-xl md:text-2xl font-mono 
-                    flex justify-center items-center w-full  p-2 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl bg-indigo-600   underline">
-                            Edit
-                        </a>
-                    </div>
-                </div>
-            @else
-                <!-- Display for non-editable users -->
-                <div class="p-2 m-6 w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3  flex flex-wrap justify-center mx-auto rounded-2xl shadow-lg bg-white  transition-all ease-in-out duration-300 hover:scale-105">
-                    <!-- Vulnerability Details Button -->
-                    <div class="flex justify-center items-center w-full h-full p-4 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl bg-indigo-700  hover:underline p-4">
-                        <a href="{{ route('index') . '/' . $vulnerability->id }}" class="text-white font-semibold text-xl md:text-2xl font-mono">
-                            {{ $vulnerability->name }}
-                        </a>
-                    </div>
-                </div>
-            @endcan
-            @php $counter++ @endphp
-        @endforeach
+<div class="flex justify-between">
+   
+    <!-- Vulnerabilities Display Section -->
+    <div class="w-1/3 bg-white rounded-2xl mr-4 shadow-md p-4">
+        <section class="bg-white rounded-xl">
+            <div class="bg-blue-100 p-4 rounded-lg">
+                @php $counter = 0 @endphp
+                @foreach($vulnerabilities as $vulnerability)
+                    <!-- Check user permissions for vulnerability edit -->
+                    @can('create', App\Models\Vulnerability::class)
+                        <div class="mb-4 last:mb-0">
+                            <!-- Edit Button -->
+                            <div class="flex flex-col justify-between bg-gray-100 p-3 rounded-lg border border-blue-700 transition duration-200 ease-in-out transform hover:scale-105">
+                                <!-- Vulnerability Details -->
+                                <div class="text-gray-600 text-sm mb-2">
+                                    <strong class="font-semibold text-red-500">{{ $vulnerability->name }}</strong>
+                                    <div>ID: <span class="text-red-400">{{ $vulnerability->id }}</span></div>
+                                    <div>Description: <span class="text-red-400">{{ $vulnerability->description }}</span></div>
+                                    <div>Severity: <span class="text-red-400">{{ $vulnerability->severity }}</span></div>
+                                    <div>Mitigation: <span class="text-red-400">{{ $vulnerability->mitigation }}</span></div>
+                                    <div>Status: <span class="text-red-400">{{ $vulnerability->is_fixed ? 'Fixed' : 'Not fixed' }}</span></div>
+                                </div>
+                    
+                                <a href="{{ route('index') . '/' . $vulnerability->id . '/edit'}}" class="text-white text-sm bg-blue-600 hover:bg-blue-700 rounded-md px-3 py-2 mt-2 transition duration-150 ease-in-out">
+                                    Edit
+                                </a>
+                            </div>
+                        </div>
+                    @else
+                        <!-- Display for non-editable users -->
+                        <div class="mb-4 last:mb-0 p-2 bg-indigo-200  hover:bg-indigo-300 rounded-xl border border-blue-700 transition duration-200 ease-in-out transform hover:scale-105">
+                            <div class="flex justify-center items-center p-3">
+                                <a href="{{ route('index') . '/' . $vulnerability->id }}" class="text-gray-900 hover:text-blue-900 font-medium text-1g font-mono font-bold">
+                                    {{ $vulnerability->name }}
+                                </a>
+                            </div>
+                        </div>
+                    @endcan
+                    @php $counter++ @endphp
+                @endforeach
+            </div>
+        </section>
     </div>
-</section>
+   
+    <!-- Practice Section -->
+    <div class="w-2/3 bg-gray-200 rounded-lg shadow-md p-6">
+        <section class="py-8  text-center rounded-xl bg-white">
+            <!-- Conditional check for user permissions -->
+            @can('create', App\Models\Vulnerability::class)
+                <!-- Admin Welcome Message -->
+                <h3 class="text-xl font-semibold text-blue-700 mb-4  font-mono">Welcome <span class="text-red-500">{{ Auth::user()->name }}</span>, you are an administrator.</h3>
+                <p class="text-sm text-gray-800 mb-4">
+                    This is the editing page for administrators.
+                    <br>Click "Edit" to update or remove a vulnerability.
+                </p>
+            @else
+                <!-- User Welcome Message -->
+                <h2 class="text-xl font-semibold text-blue-700 mb-4 font-mono">Welcome, <span class="text-red-500">{{ Auth::user()->name }}</span>. This is the Web Vulnerabilities Learning Hub.</h2>
+                <p class="text-sm text-gray-800 mb-4 font-mono" >
+                    Explore the fascinating world of web vulnerabilities and enhance your understanding of web security.
+                    <br>Click on any vulnerability to learn and practice more about it and how to protect against potential threats.
+                </p>
+            @endcan
+        </section>
 
-
-
+        <section class="py-8  text-center rounded-xl ">
+            <!-- news-->
+        </section>
+    </div>
+</div>
 @endsection
