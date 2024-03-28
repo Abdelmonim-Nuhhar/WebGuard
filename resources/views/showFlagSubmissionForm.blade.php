@@ -70,10 +70,20 @@
                         <select id="level" name="level" class="form-select w-full @error('level') border-red-500 @enderror mb-4 p-4 
                         text-xl font-semibold rounded-2xl pt-4">
                             <option value="">Select Level</option>
-                            <option value="low">Low</option>
-                            <option value="medium">Medium</option>
-                            <option value="high">High</option>
-                            <option value="impossible">Impossible</option>
+                            <option value="Session Id low Security">Session Id low Security</option>
+                            <option value="Session Id medium Security">Session Id medium Security</option>
+                            <option value="Session Id high Security">Session Id high Security</option>
+                            <option value="Session Id impossible Security">Session Id impossible Security</option>
+                            <option value="File Upload Challenge">File Upload Challenge</option>
+                            <option value="XSS Reflected">XSS Reflected</option>
+                            <option value="XSS Store">XSS Store</option>
+                            <option value="XSS BaseDom">XSS BaseDom</option>
+                            <option value="Security MisConfig">Security MisConfig</option>
+                            <option value="SQL basic">SQL basic</option>
+                            <option value="SQL Medium">SQL Medium</option>
+                            <option value="SQL Advance">SQL Advance</option>
+
+
                         </select>
                         @error('level')
                         <p class="text-red-500 text-2xl font-mono mt-1">{{ $message }}</p>

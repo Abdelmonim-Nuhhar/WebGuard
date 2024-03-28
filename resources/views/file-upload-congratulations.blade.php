@@ -18,7 +18,7 @@
 <h2 class="text-xl font-bold font-mono text-gray-800 mb-2">Congratulations!</h2>
             <p class="text-gray-600 font-mono">
             You have successfully uploaded a file containing specific content, completing the upload file vulnerability lesson and practice.
-    Here is your flag: <strong class="text-green-500">flag{a0e6e4d440a0a618b9bbd94b214cf20f{{ Auth::user()->id }}}</strong>
+    Here is your flag: <strong class="text-green-500">flag{a0e6e4d440a0a618b9bbd94b214cf20f}</strong>
               </p> <br>
               
            

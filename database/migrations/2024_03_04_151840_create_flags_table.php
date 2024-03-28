@@ -15,7 +15,20 @@ return new class extends Migration
             $table->id();
             $table->string('text'); // Column to store the flag text
             $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Foreign key to associate the flag with a user
-            $table->enum('level', ['low', 'medium', 'high', 'impossible']); // Enum column to store the level of the flag
+            $table->enum('level', [
+            'Session Id low Security',
+            'Session Id medium Security',
+            'Session Id high Security', 
+            'Session Id impossible Security',
+            'File Upload  Challenge',
+            'XSS Reflected',
+            'XSS Store',
+            'XSS BaseDom',
+            'Security MisConfig',
+            'SQL basic',
+            'SQL Medium',
+            'SQL Advance',
+        ]); // Enum column to store the level of the flag
             $table->boolean('submitted')->default(false); // Column to indicate whether the flag has been submitted
             $table->timestamps();
         });

@@ -24,7 +24,7 @@
 
             <div class="flex items-center justify-between mt-4 p-8 bg-gray-200 mt-4">
                 <p class="text-2xl text-green-500  font-bold mb-4 font-mono">
-                flag:725bc77aa1443d8074e05c7710ef9245
+                flag:{725bc77aa1443d8074e05c7710ef9245}
                 </p>
 
                 <a href="{{ route('showFlagSubmissionForm') }}"  class="bg-blue-800 hover:bg-blue-600 text-white p-4 font-bold  rounded-2xl">
@@ -64,7 +64,7 @@
             </p>
             <div class="flex items-center justify-between mt-4 p-8 bg-gray-200 mt-4">
                 <p class="text-2xl text-green-500  font-bold mb-4 font-mono">
-                flag:7eab4bebad099e7a4eb0d913f9e307e7
+                flag:{7eab4bebad099e7a4eb0d913f9e307e7}
                 </p>
 
                 <a href="{{ route('showFlagSubmissionForm') }}"  class="bg-blue-800 hover:bg-blue-600 text-white p-4 font-bold  rounded-2xl">
@@ -101,7 +101,7 @@
 
             <div class="flex items-center justify-between mt-4 p-8 bg-gray-200 mt-4">
                 <p class="text-2xl text-green-500  font-bold mb-4 font-mono">
-                flag:1119d47604d28ba9abc28b5d5070870a
+                flag:{1119d47604d28ba9abc28b5d5070870a}
                 </p>
 
                 <a href="{{ route('showFlagSubmissionForm') }}"  class="bg-blue-800 hover:bg-blue-600 text-white p-4 font-bold  rounded-2xl">
@@ -137,7 +137,7 @@
             </p>
 
             <p class="text-2xl text-green-500  font-bold mb-4 font-mono">
-            flag:d868108b0588d07ce90733d43e7e18f0 
+            flag:{d868108b0588d07ce90733d43e7e18f0} 
             </p>
 
             <h2 class="text-xl text-red-500  font-bold mb-4 font-mono">Source code for a low-level weak session ID vulnerability</h2>
