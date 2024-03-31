@@ -1,8 +1,8 @@
 <!-- Attention Message -->
-<div class="text-xl mb-4 bg-white p-4 rounded-2xl font-mono p-2">
+<div class="text-sm mb-4 bg-white p-2 rounded-2xl font-mono ">
             <p class="text-red-600 font-bold">🚨 Attention! 🚨</p>
             <p>
-                Dear <span class="text-red-600 text-2xl mb-4">{{ Auth::user()->name }},</span>
+                Dear <span class="text-red-600 text-xl mb-4">{{ Auth::user()->name }},</span>
             </p>
             <p>
                 As part of our security awareness campaign, we encourage you to actively engage in solving
@@ -12,7 +12,7 @@
         </div>
 
         <!-- Example and Form Section -->
-        <div class="text-xl mb-4 bg-white p-4 rounded-2xl font-mono p-2">
+        <div class="text-sm mb-2 bg-white p-4 rounded-2xl font-mono p-2">
             <p>
             For example, if an attacker crafts a URL with embedded code,
             the code and its contents will be executed back to the user without any alteration.

@@ -19,30 +19,30 @@
 
 @section('content')
     <!-- Header -->
-    <div class="bg-gradient-to-r from-blue-400 via-blue-100 to-blue-300 text-white p-4 rounded-3xl pt-16 pb-16">
+    <div class="bg-gradient-to-r from-blue-200 via-blue-100 to-blue-300 text-white p-4 rounded-3xl pt-16 pb-16">
 
     @auth 
     @can('create', App\Models\Vulnerability::class)
-    <p class="text-blue-800 p-4 font-bold text-3xl font-mono bg-red-200 mb-16 rounded-3xl">
+    <p class="text-blue-800 p-4 font-bold text-xl font-mono mb-4 rounded-3xl">
     Welcome, Admin  
 
-                            <span class="text-gray-800 text-4xl">{{ Auth::user()->name }}. </span>You can manage the Learning Hub.
+                            <span class="text-gray-800 text-2xl">{{ Auth::user()->name }}. </span>You can manage the Learning Hub.
 
                                <br>
                                <br>
-                               <p class="text-gray-700 p-4 font-bold text-2xl font-mono ">
+                               <p class="text-gray-700 p-4 font-bold text-xl font-mono ">
 
-                               Click <a href="{{ route('index') }}" class="bg-red-400 p-3 text-white pl-4 rounded-2xl">Edit L-Hub</a> to edit the existing vulnerabilities.
+                               Click <a href="{{ route('index') }}" class="bg-indigo-500 p-2 text-white pl-4 rounded-2xl">Edit L-Hub</a> to edit the existing vulnerabilities.
                                <br>
                                <br>
-                               Click  <a href="{{ route('create') }}" class="bg-red-200 p-3  pl-4 rounded-2xl " >Add Vulnerability</a>  to add a new vulnerability.
+                               Click  <a href="{{ route('create') }}" class="bg-indigo-500 p-2  pl-4 rounded-2xl  text-white" >Add Vulnerability</a>  to add a new vulnerability.
                             </p>
 
     </p>
     </div>
     @else
-    <p class="text-gray-700 p-4 font-bold text-2xl font-mono ">
-    Welcome <span class="text-red-600 text-4xl">{{ Auth::user()->name }}</span> to Learning Hub. You can now click on Learning Hub to learn and practice.
+    <p class="text-gray-700 p-4 font-bold text-1g font-mono ">
+    Welcome <span class="text-red-600 text-2xl">{{ Auth::user()->name }}</span> to Learning Hub. You can now click on Learning Hub to learn and practice.
 </div>
                                
     </p>
@@ -57,7 +57,7 @@
 
     @else
         <div class="container mx-auto  ">
-            <h1 class="text-4xl font-semibold text-gray-500 p-4 font-semibold text-3xl font-mono">Welcome to  Web Guard</h1>
+            <h1 class=" font-semibold text-gray-500 p-4 font-semibold text-xl font-mono">Welcome to  Web Guard</h1>
             <p class="text-gray-800 leading-loose">
                 Enhance your knowledge of web application security with Web Guard. <a href="{{ route('register') }}" class="bg-blue-300 text-red-500 font-bold py-2 p-5 rounded-full mt-4 inline-block hover:bg-gray-200 transition duration-300 underline">Register</a>
                  now to access exclusive Learning Hub and resources.
@@ -70,11 +70,11 @@
         <div class="w-full sm:w-2/3  text-white p-2 rounded-2xl shadow-md text-center mr-2">
             
         <section class="mb-8">
-            <h2 class="text-gray-700 p-2 font-semibold text-2xl font-mono">Features </h2>
+            <h2 class="text-gray-700 p-2 font-semibold text-xl font-mono">Features </h2>
             <div class="flex flex-wrap sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <!-- Featured Course Card -->
                 <div class="bg-white p-6 rounded-lg shadow-md hover:bg-blue-100">
-                    <h3 class="text-gray-700 p-2 font-semibold text-2xl font-mono font-semibold mb-2">Web Vulnerabilities Learning Hub</h3>
+                    <h3 class="text-gray-700 p-2 font-semibold text-xl font-mono font-semibold mb-2">Web Vulnerabilities Learning Hub</h3>
                     <p class="text-gray-700 font-mono">
                         Educate web developers about common web vulnerabilities to build a secure website.
                     </p>
@@ -110,7 +110,7 @@
     <div class="flex">
     <div class="w-full sm:w-2/3 text-white p-2 rounded-2xl shadow-md text-center mr-2">
     <section class="mb-8">
-        <h2 class="text-gray-700 p-2 font-semibold text-2xl font-mono mb-2">Why Register with Web Guard?</h2>
+        <h2 class="text-gray-700 p-2 font-semibold text-xl font-mono mb-2">Why Register with Web Guard?</h2>
         <div class="bg-white p-4 rounded-lg shadow-md font-mono hover:bg-blue-100">
             <ul class="list-disc  text-gray-800 ">
                 <li>Unlock the full potential of Web Guard by registering for an account.</li>
@@ -131,7 +131,7 @@
 </div>
         <section class="mb-8">
             <div class="bg-white p-6 rounded-lg shadow-md hover:bg-blue-100">
-                <h2 class="text-gray-700 p-2 font-semibold text-2xl font-mono font-semibold mb-2">Ready to Get Started?</h2>
+                <h2 class="text-gray-700 p-2 font-semibold text-xl font-mono font-semibold mb-2">Ready to Get Started?</h2>
                 <p class="text-gray-800 leading-loose font-mono">
                     Register now and dive into the world of web application security. Join a community passionate about building and securing the web.
                 </p>

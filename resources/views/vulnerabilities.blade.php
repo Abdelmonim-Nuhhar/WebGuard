@@ -51,8 +51,8 @@
             <!-- Conditional check for user permissions -->
             @can('create', App\Models\Vulnerability::class)
                 <!-- Admin Welcome Message -->
-                <h3 class="text-xl font-semibold text-blue-700 mb-4  font-mono">Welcome <span class="text-red-500">{{ Auth::user()->name }}</span>, you are an administrator.</h3>
-                <p class="text-sm text-gray-800 mb-4">
+                <h2 class="text-xl font-semibold text-blue-700 mb-4 font-mono">Welcome <span class="text-red-500">{{ Auth::user()->name }}</span>, you are an administrator.</h2>
+                <p class="text-sm text-gray-800 mb-4 font-mono" >
                     This is the editing page for administrators.
                     <br>Click "Edit" to update or remove a vulnerability.
                 </p>
