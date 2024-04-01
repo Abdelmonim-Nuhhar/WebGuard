@@ -7,7 +7,9 @@
    
     <!-- XSS Menu Section -->
     <div class="w-1/3 bg-gray-100 rounded-2xl mr-4 shadow-md p-1">
-        <x-sessionID-levels-menu></x-sessionID-levels-menu>
+        <x-sessionID-levels-menu>
+            <x-session-id-intro-link></x-session-id-intro-link>
+        </x-sessionID-levels-menu>
     </div>
    
     <!-- Practice Section -->
@@ -16,6 +18,7 @@
     <div class="w-2/3 bg-white rounded-xl p-6">
     <x-sessionID-practise-style>
     Advanced Level: <br><br>
+    <p class="text-sm font-mono">
     This level indicates a more robust implementation of session ID generation, although it still has 
     vulnerabilities that could potentially be exploited by determined attackers.
     <br>
@@ -23,15 +26,16 @@
     Enter your guess for the next session Advanced ID and click on "Check Session ID" 
     to verify your prediction for the next session ID. <br>
     If you succeed, you will receive a flag. Don't forget to submit your flag.
+    </p>
 
     </x-sessionID-practise-style>
 
     <div class="bg-gray-200 p-6 mb-8 rounded-2xl  level-section" id="high" style="display: block;">
         <div>
-            <h2 class="text-2xl font-semibold mb-2 text-black">Advanced Level</h2>
+            
             <form method="POST" action="{{ route('weak_session.high') }}">
                 @csrf 
-                <button type="submit" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
+                <button type="submit" class="px-6 py-2 bg-green-600 hover:bg-grren-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-white font-bold rounded-md">
                         Generate Advanced Session ID 
                     </button>
                 </form>
@@ -46,7 +50,7 @@
                 <input type="text" id="found_session_id_high" name="found_session_id_high" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
             </div>
             <div class="mt-4">
-                <button type="submit" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
+                <button type="submit" class="px-6 py-2 bg-green-600 hover:bg-grren-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-black font-bold rounded-md">
                     Check Session ID
                 </button>
             </div>

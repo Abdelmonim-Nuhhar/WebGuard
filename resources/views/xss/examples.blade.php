@@ -90,3 +90,73 @@
 
 {{-- End the section for the login content --}}
 @endsection
+
+
+
+<style>
+    .success-message {
+        color: green;
+    }
+</style>
+@extends('layouts.new-app')
+
+@section('content')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQLi</title>
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="p-4 m-2 rounded-lg shadow-lg bg-white border-1 font-mono mb-8 text-white">
+    <div class="bg-white mb-4 rounded-2xl">
+        <div class="m-2 flex items-center bg-indigo-200 hover:bg-indigo-300 rounded-xl p-2 border border-blue-700 transition duration-200 ease-in-out transform hover:scale-105">
+            <a href="{{ route('xss') }}" class="text-gray-700 font-semibold text-lg font-mono flex items-center">
+               
+                SQLi Menu
+            </a>
+        </div>
+
+     
+     
+
+        <div class="m-2 rounded-lg shadow-lg border-2 bg-white" id="toggleReflectedXssLevels" style="display: block;">
+
+            <div class="flex justify-center">
+                <div class="w-60 m-2 flex items-center bg-indigo-200 hover:bg-indigo-300 rounded-xl p-2 border border-blue-700 transition duration-200 ease-in-out transform hover:scale-105">
+                    <a href="{{ route('xss.reflected') }}" class="text-gray-900 p-2 w-full font-semibold text-sm font-mono">
+                        Sqli basic 
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex justify-center">
+                <div class="w-60 m-2 flex items-center bg-indigo-200 hover:bg-indigo-300 rounded-xl p-2 border border-blue-700 transition duration-200 ease-in-out transform hover:scale-105">
+                    <a href="{{ route('xss.medium') }}" class="text-gray-900 p-2 font-semibold text-sm font-mono">
+                        Sqli  Medium
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex justify-center">
+                <div class="w-60 m-2 flex items-center bg-indigo-200 hover:bg-indigo-300 rounded-xl p-2 border border-blue-700 transition duration-200 ease-in-out transform hover:scale-105">
+                    <a href="" class="text-gray-900 p-2 font-semibold text-sm font-mono">
+                        sqli  Advance
+                    </a>
+                </div>
+            </div>
+
+ 
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+@endsection
+
