@@ -11,8 +11,9 @@
 
 <div class="p-4 m-2 rounded-lg shadow-lg bg-white border-1 font-mono mb-8 text-white">
     <div class="bg-white mb-4 rounded-2xl">
-        <div class="m-2 flex items-center bg-indigo-200 hover:bg-indigo-300 rounded-xl p-2 border border-blue-700 transition duration-200 ease-in-out transform hover:scale-105">
-            <a href="{{ route('xss') }}" class="text-gray-700 font-semibold text-lg font-mono flex items-center">
+        <div class="m-2 flex items-center bg-indigo-500 hover:bg-indigo-400 rounded-xl p-2 border border-blue-700 transition duration-200
+        flex items-center justify-center ease-in-out transform hover:scale-105">
+            <a href="{{ route('xss') }}" class="text-white font-semibold text-lg font-mono flex items-center">
                 <span class="text-2xl mr-2">&#8592;</span> <!-- Big back sign -->
                 XSS Types Menu
             </a>

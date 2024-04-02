@@ -43,23 +43,7 @@ Route::put('/vulnerabilities/{id}/edit', [VulnerabilityController::class, 'updat
 
 
 
-// Routes for weak session ID vulnerabilities
-Route::get('/vulnerabilities/weak_session/basic_level', [VulnerabilityController::class, 'showBasicLevel'])->name('basic.level');
-Route::post('/vulnerabilities/weak_session/low', [VulnerabilityController::class, 'generateWeakSessionLow'])->name('weak_session.low');
 
-Route::get('/vulnerabilities/weak_session/intermediate_level', [VulnerabilityController::class, 'showIntermediateSession'])->name('intermediate.session');
-Route::post('/vulnerabilities/weak_session/medium', [VulnerabilityController::class, 'generateWeakSessionMedium'])->name('weak_session.medium');
-
-Route::get('/vulnerabilities/weak_session/advance_level', [VulnerabilityController::class, 'showAdvanceSession'])->name('advance.session');
-Route::post('/vulnerabilities/weak_session/high', [VulnerabilityController::class, 'generateWeakSessionHigh'])->name('weak_session.high');
-
-Route::get('/vulnerabilities/weak_session/challenge_level', [VulnerabilityController::class, 'showChallengeSession'])->name('challenge.session');
-Route::post('/vulnerabilities/weak_session/impossible', [VulnerabilityController::class, 'generateWeakSessionImpossible'])->name('weak_session.impossible');
-
-
-// Routes for flags submisson
-
-Route::post('/showFlagSubmissionForm', [VulnerabilityController::class, 'submitFlag'])->name('submitFlag');
 
 // XSS
 
@@ -128,6 +112,21 @@ Route::get('/vulnerabilities/3', [VulnerabilityController::class, 'show'])->name
 Route::get('/vulnerabilities/5', [VulnerabilityController::class, 'show'])->name('sql.injections');
 Route::get('/vulnerabilities/6', [VulnerabilityController::class, 'show'])->name('file.upload');
 
+// Routes for weak session ID vulnerabilities
+Route::get('/vulnerabilities/weak_session/basic_level', [VulnerabilityController::class, 'showBasicLevel'])->name('basic.level');
+Route::post('/vulnerabilities/weak_session/low', [VulnerabilityController::class, 'generateWeakSessionLow'])->name('weak_session.low');
+
+Route::get('/vulnerabilities/weak_session/intermediate_level', [VulnerabilityController::class, 'showIntermediateSession'])->name('intermediate.session');
+Route::post('/vulnerabilities/weak_session/medium', [VulnerabilityController::class, 'generateWeakSessionMedium'])->name('weak_session.medium');
+
+Route::get('/vulnerabilities/weak_session/advance_level', [VulnerabilityController::class, 'showAdvanceSession'])->name('advance.session');
+Route::post('/vulnerabilities/weak_session/high', [VulnerabilityController::class, 'generateWeakSessionHigh'])->name('weak_session.high');
+
+Route::get('/vulnerabilities/weak_session/challenge_level', [VulnerabilityController::class, 'showChallengeSession'])->name('challenge.session');
+Route::post('/vulnerabilities/weak_session/impossible', [VulnerabilityController::class, 'generateWeakSessionImpossible'])->name('weak_session.impossible');
+
+
+
 // a Route for File Upload
 Route::get('/upload/basic', [FileUploadController::class, 'showUploadForm'])->name('upload.form');
 Route::post('/upload', [FileUploadController::class, 'uploadBasic'])->name('upload.basic');
@@ -154,6 +153,11 @@ Route::get('/upload/congratulations', function () {
 // Routes for flags submisson
 Route::get('/showFlagSubmissionForm', [VulnerabilityController::class, 'showFlagSubmissionForm'])->name('showFlagSubmissionForm');
 
+
+
+// Routes for flags submisson
+
+Route::post('/showFlagSubmissionForm', [VulnerabilityController::class, 'submitFlag'])->name('submitFlag');
 
 });
 // Live news

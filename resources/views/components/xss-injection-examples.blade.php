@@ -1,9 +1,9 @@
 
-<span class="text-black text-2xl font-bold"> Suggestions for cross-site scripting testing: </span>
+<span class="text-white bg-black text-xl font-bold"> Suggestions for cross-site scripting testing: </span>
     <br>
     <br>
     <code>
-        <span class="text-gray-900 text-xl font-bold">&lt;script&gt;alert('XSS');&lt;/script&gt;<br>
+        <span class="text-gray-900 text-sm font mono font-semibold">&lt;script&gt;alert('XSS');&lt;/script&gt;<br>
         
         &lt;script type='text/javascript'&gt;alert(document.cookie);&lt;/script&gt;<br>
         &lt;script type='text/javascript'&gt;alert('xss vulnerability!');&lt;/script&gt;<br>

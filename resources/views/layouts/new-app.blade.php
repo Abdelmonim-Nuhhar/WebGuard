@@ -46,7 +46,7 @@
     <footer class="bg-gray-800 text-white text-center p-4">
         <h2 class="text-white p-2 font-bold text-xl font-mono pl-8 font-italic">&copy; {{ date('Y') }} Web Guard Vulnerabilities. All rights reserved.</h2>
     </footer>
-
+    @stack('scripts')
 </body>
 
 </html>

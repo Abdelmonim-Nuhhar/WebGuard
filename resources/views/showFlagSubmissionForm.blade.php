@@ -37,7 +37,7 @@
                 <!-- Flag Input -->
                 <div class="mb-2">
                     <label for="text" class="block text-gray-700 font-bold mb-1 text-lg font-mono">Flag Here</label>
-                    <input id="text" type="text" class="form-input w-full rounded-lg p-1 text-base" name="text" required autofocus>
+                    <input id="text" type="text" class="form-input w-full rounded-lg p-1 text-base" name="text" required autofocus value="{{ old('text') }}">
                     @error('text')
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror

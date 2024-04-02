@@ -13,14 +13,16 @@
     <div class="bg-white p-3 mb-4 rounded-2xl">
         <hr class="my-2 border-blue-800">
         <h1 class="text-lg font-bold mb-2 text-gray-800 pl-2">Practice Section</h1>
-        <div class="transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl p-4 rounded-2xl bg-indigo-200 border border-blue-700 transition duration-200 ease-in-out transform hover:scale-105">
-            <a href="{{ route('xss') }}" class="text-gray-700 font-semibold text-lg font-mono">
+        <div class="transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl p-6 rounded-2xl bg-indigo-500 border border-yellow-700 transition 
+        flex items-center justify-center duration-200 ease-in-out transform hover:scale-105">
+            <a href="{{ route('xss') }}" class="text-white font-semibold text-lg font-mono">
                 XSS Types Menu
             </a>
         </div>
         <hr class="my-2 border-blue-800">
         
-        <div class="rounded-2xl bg-indigo-200 hover:bg-indigo-300 p-1 mb-1 border border-blue-700 transition duration-200 ease-in-out transform hover:scale-105">
+        <div class="rounded-2xl bg-indigo-200 hover:bg-indigo-300 p-2 mb-1 border border-blue-700 transition 
+        duration-200 ease-in-out transform hover:scale-105">
             <button id="toggleReflectedXssButton" class="w-full text-gray-700 font-bold text-lg py-2 px-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-opacity-50">
                 Reflected XSS
             </button>

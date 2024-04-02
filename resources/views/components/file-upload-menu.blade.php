@@ -11,7 +11,7 @@
 
     <div class="p-2 m-1 rounded-lg shadow-lg bg-white border-1 font-mono mb-8 text-white">
         <div class="bg-white p-1 mb-2 rounded-2xl">
-            <div class="m-2 transition-transform transform hover:scale-110 focus:scale-110  Hover:bg-indigo-700 shadow-2xl p-3 rounded-2xl bg-indigo-600 border-green-800 flex items-center">
+            <div class="m-2 transition-transform transform hover:scale-110 focus:scale-110  Hover:bg-indigo-700 shadow-2xl p-3 rounded-2xl bg-indigo-600 border-green-800 flex items-center justify-center">
                 <a href="{{ route('file.upload') }}" class="text-white font-semibold text-md font-mono flex items-center">
                     {{ $slot }}
                     File Upload vulnerability</a>
@@ -31,31 +31,36 @@
             <div class="m-1 rounded-lg shadow-lg white border-2" id="toggleReflectedXssLevels" style="display: block;">
 
                 <div class="flex justify-center">
-                    <div class="m-2 w-72 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl bg-indigo-200 p-2 mb-1 hover:bg-indigo-300">
+                    <div class="m-2 w-72 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl bg-indigo-200 
+                    flex items-center justify-center p-2 mb-1 hover:bg-indigo-300">
                         <a href="{{ route('upload.form') }}" class="text-gray-900 p-2 font-semibold text-md font-mono">1- Basic</a>
                     </div>
                 </div>
 
                 <div class="flex justify-center">
-                    <div class="m-2 w-72 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl bg-indigo-200 p-2 mb-1 hover:bg-indigo-300">
+                    <div class="m-2 w-72 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl bg-indigo-200
+                    flex items-center justify-center p-2 mb-1 hover:bg-indigo-300">
                         <a href="{{ route('upload.beyond.basic.form') }}" class="text-gray-900 p-2 font-semibold text-md font-mono">2- Beyond Basic</a>
                     </div>
                 </div>
 
                 <div class="flex justify-center">
-                    <div class="m-2 w-72 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl bg-indigo-200 p-2 mb-1 hover:bg-indigo-300">
+                    <div class="m-2 w-72 transition-transform transform hover:scale-110 focus:scale-110 shadow-2xl rounded-2xl bg-indigo-200
+                    flex items-center justify-center p-2 mb-1 hover:bg-indigo-300">
                         <a href="{{ route('upload.intermediate.form') }}" class="text-gray-900 p-2 font-semibold text-md font-mono">3- Intermediate</a>
                     </div>
                 </div>
 
                 <div class="flex justify-center">
-                    <div class="m-2 w-72 transition-transform transform hover:scale-110 focus:scale-110 shadow-xl rounded-2xl bg-indigo-200 p-2 mb-1 hover:bg-indigo-300">
+                    <div class="m-2 w-72 transition-transform transform hover:scale-110 focus:scale-110 shadow-xl rounded-2xl bg-indigo-200
+                    flex items-center justify-center p-2 mb-1 hover:bg-indigo-300">
                         <a href="{{ route('upload.advanced.form') }}" class="text-black p-2 font-semibold text-md font-mono">4- Advanced</a>
                     </div>
                 </div>
 
                 <div class="flex justify-center">
-                    <div class="m-2 w-72 transition-transform transform hover:scale-110 focus:scale-110 shadow-xl rounded-2xl bg-indigo-200 p-2 mb-1 hover:bg-indigo-300">
+                    <div class="m-2 w-72 transition-transform transform hover:scale-110 focus:scale-110 shadow-xl rounded-2xl bg-indigo-200
+                    flex items-center justify-center p-2 mb-1 hover:bg-indigo-300">
                         <a href="{{ route('upload.file.challeng') }}" class="text-black p-2 font-semibold text-md font-mono">5-File Upload Challenge </a>
                     </div>
                 </div>   
