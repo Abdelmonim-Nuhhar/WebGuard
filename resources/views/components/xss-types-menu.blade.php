@@ -104,23 +104,15 @@
             </div>
         </div>
 
-        <div class="rounded-2xl bg-indigo-200 hover:bg-indigo-300 p-1 mb-1 border border-blue-700 transition duration-200 ease-in-out transform hover:scale-105">
-            <button id="toggleDomXssButton" class="w-full text-gray-700 font-bold text-lg py-3 px-5 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-opacity-50">
+        <div class="rounded-2xl bg-indigo-200 hover:bg-indigo-300 p-1 mb-1 border border-blue-700 transition duration-200 ease-in-out transform hover:scale-105
+        ">
+        <a href="{{ route('domXSS.low') }}" class="w-full text-gray-700 font-bold text-lg py-3 px-5 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-opacity-50
+        flex items-centre justify-center">
                 DOM-based XSS
-            </button>
+        </a>
         </div>
 
-        <div class="rounded-2xl shadow-lg bg-white border-2" id="toggleDomXssLevels" style="display: none;">
 
-            <div class="flex justify-center">
-                <div class="w-60 rounded-2xl bg-indigo-200 hover:bg-indigo-300 p-1 mb-1 border border-blue-700 transition duration-200 ease-in-out transform hover:scale-105">
-                    <a href="{{ route('domXSS.low') }}" class="text-gray-900 p-2 font-semibold text-lg font-mono">
-                        Dom Low
-                    </a>
-                </div>
-            </div>
-
-        </div>
     </div>
 </div>
 
