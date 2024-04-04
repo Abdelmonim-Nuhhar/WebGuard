@@ -4,10 +4,14 @@
 <div class="flex flex-col md:flex-row justify-center md:space-x-4 p-6 md:p-10">
 
     <div class="md:w-1/4 bg-white rounded-lg shadow-lg p-4 mb-6 md:mb-0">
-        <x-sql-basic-menu>Blind SQL</x-sql-basic-menu>
-    </div>
 
-    <div class="md:w-1/3 container px-4 py-8 bg-white rounded-lg">
+        <div class="m-2 flex items-center bg-indigo-200 hover:bg-indigo-300 rounded-xl p-2 border border-blue-700 transition duration-200 ease-in-out transform hover:scale-105">
+            <a href="{{ route('sql.injections') }}" class="text-gray-700 font-semibold text-lg font-mono flex items-center pl-8">
+                <span class="text-2xl mr-2 ">&#8592;</span> <!-- Big back sign -->
+                SQL Intro & Menu
+            </a>
+        </div>
+        <p class="text-xl font-bold "> Practise Sections</p>
         <h2 class="text-xl font-bold mb-4 font-mono bg-gray-100 rounded-lg p-2">Vulnerable To Blind SQL injection</h2>
 
         @if(session('success'))
@@ -22,7 +26,7 @@
             </div>
         @endif
 
-        <form action="{{ route('blind.challenge') }}" method="POST" class="mb-4 bg-gray-200 p-2  rounded-xl">
+        <form action="{{ route('blind.challenge') }}" method="POST" class="mb-4 space-y-4 bg-gray-200 p-4 rounded-lg font-mono border border-blue-700">
             @csrf
             <div class="mb-4">
                 <label for="username" class="block text-lg font-mono font-bold text-gray-700 mb-4">Username:</label>
@@ -31,6 +35,10 @@
             <button type="submit" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded text-lg font-mono">Submit</button>
         </form>
 
+    </div>
+
+    <div class="md:w-1/3 container px-4 py-8 bg-white rounded-lg">
+        
         <div class="bg-gray-200 p-4 rounded-lg">
             <h2 class="text-lg font-bold mb-4 font-mono">Note:</h2>
             <p class="text-gray-800 font-mono">It's crucial to highlight the importance of secure coding practices, such as using parameterised queries and input validation, to protect applications from such attacks.</p>

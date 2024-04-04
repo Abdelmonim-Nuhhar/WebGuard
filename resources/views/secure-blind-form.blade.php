@@ -5,10 +5,10 @@
 
 
     <!-- Login Form Section -->
-    <div class="md:w-1/3">
-        
+   
+    <div class="md:w-1/2">
 
-
+    
     {{-- Display Success Message --}}
     @if(session('success'))
         <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
@@ -23,27 +23,23 @@
         </div>
     @endif
 
-<div class="bg-gray-200 p-4 rounded-2xl mt-2">
-    <form action="{{ route('secureBlind.challenge') }}" method="POST" class="mb-4">
-        @csrf
-        <div class="mb-4 ">
-            <label for="username" class="block text-gray-700 mb-4 text-2xl font-mono font-bold">Username:</label>
-            <input type="text" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm" id="username" name="username" placeholder="Enter username" required>
-        </div>
-        
-        <div class=" flex justify-between">
-        <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 rounded-2xl px-6 rounded text-2xl font-mono">Submit</button>    
-             <a href="{{ route('blind.form') }}" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 rounded-2xl px-6 rounded text-2xl font-mono">Back</a>
-
+    <div class="bg-gray-200 p-4 rounded-2xl mt-2">
+        <form action="{{ route('secureBlind.challenge') }}" method="POST" class="mb-4">
+            @csrf
+            <div class="mb-4 ">
+                <label for="username" class="block text-gray-700 mb-4 text-2xl font-mono font-bold">Username:</label>
+                <input type="text" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm" id="username" name="username" placeholder="Enter username" required>
+            </div>
             
-        </div>
-      
-    </form>
+            <div class=" flex justify-between">
+            <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 rounded-2xl px-6 rounded text-2xl font-mono">Submit</button>    
+                <a href="{{ route('blind.form') }}" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 rounded-2xl px-6 rounded text-2xl font-mono">Back</a>
+
+                
+            </div>
+
+        </form>
     </div>
- 
-    
-    </div>
-    <div class="md:w-1/3">
     <div class="bg-white p-4 rounded-lg shadow-md">
         <p class="text-gray-800 font-mono">To gain insights into addressing vulnerabilities, explore the source code by toggling the button below:</p>
         <button id="toggleSourceButton" onclick="toggleSourceCode()" class="mt-4 bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg">
@@ -52,47 +48,63 @@
     </div>
 
     <div id="codePart" class="bg-white text-sm p-6 rounded-lg shadow-md mt-4" style="display: none;">
-        <p><code>
-            public function checkAdminUserSecurely(Request $request)
-            {
-                $name = $request->input('username'); // User input
+    <div class="bg-gray-100 rounded-lg shadow-md p-6 mb-6">
+    <p class="text-lg font-bold mb-4">Using Laravel's Eloquent ORM:</p>
 
-                // Secure query using Laravel's Eloquent ORM
-                $user = \App\Models\User::where('name', $name)
-                                        ->where('is_admin', 1)
-                                        ->first();
+    <div class="bg-white p-4 rounded-lg shadow">
+        <p class="text-sm font-medium text-gray-700">Securely check for admin user:</p>
 
-                if ($user) {
-                    return back()->with('success', 'Yes, there is at least one admin user!');
-                } else {
-                    return back()->with('error', 'No admin user found.');
-                }
-            }
-        </code></p>
-        <br><br>
-        <p><code>
-            <p>Or, if using Laravel's query builder directly:</p>
-            public function checkAdminUserSecurely(Request $request)
-            {
-                $name = $request->input('username'); // User input
+        <pre class="text-gray-800"><code>
+public function checkAdminUserSecurely(Request $request)
+{
+    $name = $request->input('username'); // User input
 
-                // Secure query using Laravel's query builder
-                $user = DB::table('users')
-                        ->where('name', '=', $name)
-                        ->where('is_admin', '=', 1)
-                        ->first();
+    // Secure query using Laravel's Eloquent ORM
+    $user = \App\Models\User::where('name', $name)
+                            ->where('is_admin', 1)
+                            ->first();
 
-                if ($user) {
-                    return back()->with('success', 'Yes, there is at least one admin user!');
-                } else {
-                    return back()->with('error', 'No admin user found.');
-                }
-            }
-        </code></p>
+if ($user) {
+    return back()->with('success', 'Yes, there is at least one admin user!');
+} else {
+    return back()->with('error', 'No admin user found.');
+}
+}
+        </code></pre>
+    </div>
+
+    <br>
+
+    <p class="text-lg font-bold mb-4">Alternatively, if using Laravel's query builder directly:</p>
+
+    <div class="bg-white p-4 rounded-lg shadow">
+        <p class="text-sm font-medium text-gray-700">Securely check for admin user:</p>
+
+        <pre class="text-gray-800"><code>
+public function checkAdminUserSecurely(Request $request)
+{
+    $name = $request->input('username'); // User input
+
+    // Secure query using Laravel's query builder
+    $user = DB::table('users')
+            ->where('name', '=', $name)
+            ->where('is_admin', '=', 1)
+            ->first();
+
+if ($user) {
+return back()->with('success', 'Yes, there is at least one admin user!');
+} else {
+    return back()->with('error', 'No admin user found.');
+}
+}
+        </code></pre>
     </div>
 </div>
 
-    <div class="md:w-1/3">
+    </div>
+</div>
+
+    <div class="md:w-1/2">
 
 
     <div id="mitigationInfo" class="bg-white rounded-2xl shadow-lg p-6">

@@ -3,13 +3,17 @@
 @section('content')
 <div class="flex justify-center items-start space-x-4 p-10">
    
-    <!-- XSS Menu Section -->
-    <div class="w-1/3 bg-gray-200 rounded-2xl shadow-md p-4">
-        <x-sql-basic-menu></x-sql-basic-menu>
-    </div>
-   
+
     <!-- Practice Section -->
     <div class="w-2/3 bg-gray-200 rounded-xl shadow-lg p-6 space-y-6">
+
+    <p class="text-xl font-bold "> search Results</p>
+        <div class="m-2 flex items-center bg-indigo-200 hover:bg-indigo-300 rounded-xl p-2 border border-blue-700 transition duration-200 ease-in-out transform hover:scale-105">
+            <a href="{{ route('sql.injections') }}" class="text-gray-700 font-semibold text-lg font-mono flex items-center pl-8">
+                <span class="text-2xl mr-2 ">&#8592;</span> <!-- Big back sign -->
+                SQL Intro & Menu
+            </a>
+        </div>
     @if($results)
         @foreach($results as $row)
         <div class="p-4 bg-white rounded-2xl border shadow-sm">

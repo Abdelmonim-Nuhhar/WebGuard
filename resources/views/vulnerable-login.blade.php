@@ -3,11 +3,15 @@
 @section('content')
 <div class="flex flex-col md:flex-row justify-center md:space-x-4 p-6 md:p-10">
 
-    <div class="md:w-1/3 bg-white rounded-lg shadow-lg p-4 mb-6 md:mb-0">
-        <x-sql-basic-menu>4- SQL Injection</x-sql-basic-menu>
-    </div>
+    <div class="md:w-1/2 bg-white rounded-lg shadow-lg p-4 mb-6 md:mb-0">
+    <div class="m-2 flex items-center bg-indigo-200 hover:bg-indigo-300 rounded-xl p-2 border border-blue-700 transition duration-200 ease-in-out transform hover:scale-105">
+            <a href="{{ route('sql.injections') }}" class="text-gray-700 font-semibold text-lg font-mono flex items-center pl-8">
+                <span class="text-2xl mr-2 ">&#8592;</span> <!-- Big back sign -->
+                SQL Intro & Menu
+            </a>
+        </div>
+        <p class="text-xl font-bold "> Practise Sections</p>
 
-    <div class="md:w-1/3">
         <div class="bg-white rounded-lg shadow-lg p-4 mb-6">
             <h2 class="text-lg font-bold mb-4">Vulnerable Login Form</h2>
 
@@ -21,7 +25,7 @@
             </div>
             @endif
 
-            <form action="{{ route('vulnerable.login.submit') }}" method="POST" class="space-y-2">
+            <form action="{{ route('vulnerable.login.submit') }}" method="POST" class="space-y-2 bg-gray-200 rounded-xl p-4">
                 @csrf
                 <div>
                     <label for="username" class="block text-gray-700 text-sm font-bold mb-1">Username:</label>
@@ -38,7 +42,11 @@
                 </div>
             </form>
         </div>
+    
+
     </div>
+
+ 
 
     <div class="md:w-1/2 space-y-4">
         <div class="bg-white rounded-lg shadow-lg p-4 font-mono">

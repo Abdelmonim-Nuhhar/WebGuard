@@ -41,9 +41,13 @@ Route::get('/vulnerabilities/{id}/edit', [VulnerabilityController::class, 'edit'
 Route::put('/vulnerabilities/{id}/edit', [VulnerabilityController::class, 'update'])-> name('update');
 
 
+// Live news
+Route::get('/news', [NewsController::class, 'indexNews'])->name('live.news');;
 
 
 
+// Group routes that require authentication
+Route::middleware(['auth'])->group(function () {
 
 // XSS
 
@@ -101,8 +105,6 @@ Route::post('/blind-challenge', [AuthController::class, 'blindChallenge'])->name
 Route::get('/secure-blind-challenge', [AuthController::class, 'secureBlindForm'])->name('secureBlind.form');
 Route::post('/secure-blind-challenge', [AuthController::class, 'secureblindChallenge'])->name('secureBlind.challenge');
 
-// Group routes that require authentication
-Route::middleware(['auth'])->group(function () {
 
 
 Route::get('/vulnerabilities/{id}', [VulnerabilityController::class, 'show']);
@@ -160,8 +162,7 @@ Route::get('/showFlagSubmissionForm', [VulnerabilityController::class, 'showFlag
 Route::post('/showFlagSubmissionForm', [VulnerabilityController::class, 'submitFlag'])->name('submitFlag');
 
 });
-// Live news
-Route::get('/news', [NewsController::class, 'indexNews'])->name('live.news');;
+
 
 
 

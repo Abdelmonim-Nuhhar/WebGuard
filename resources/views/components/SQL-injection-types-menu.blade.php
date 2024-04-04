@@ -32,25 +32,31 @@
 
         <hr class="my-1 border-blue-800">
 
-        <div class="m-2 rounded-lg bg-indigo-400 border-indigo-300 hover:bg-indigo-300 p-1 mb-4 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105 shadow">
+        <div class="m-2 rounded-lg bg-indigo-400 border-indigo-300 hover:bg-indigo-300 p-1 mb-4 transition duration-300 ease-in-out 
+        flex justify-center items-center transform hover:-translate-y-0.5 hover:scale-105 shadow">
             <button id="toggleSqlBasicButton" class="w-full text-black font-bold text-lg py-2 px-3 rounded-lg p-2 mb-1 challenge-btn">
                Challenges Menu
             </button>
             <button id="basicBtnStatus" class="text-xs ml-1 text-gray-700"></button>
         </div>
 
-        <div class="challenge-section m-2 rounded-xl bg-gray-100 border-gray-300 p-4 mb-4 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105 shadow">
-            <a href="{{ route('customer.showSearchForm') }}" class="w-full bg-indigo-300 text-black font-bold text-sm py-2 px-3 rounded-lg hover:bg-indigo-400 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:ring-opacity-50 challenge-btn mb-2 transition ease-in-out duration-150 block">
+        <div class="challenge-section m-2 rounded-xl bg-gray-100 border-gray-300 p-4 mb-4 transition duration-300 ease-in-out 
+         transform hover:-translate-y-0.5 hover:scale-105 shadow">
+            <a href="{{ route('customer.showSearchForm') }}" class="w-full bg-indigo-300 text-black font-bold text-1g 
+            flex justify-center items-center p-3 rounded-lg hover:bg-indigo-400 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:ring-opacity-50 challenge-btn mb-2 transition ease-in-out duration-150 block">
                 1- Basic SQL
             </a>
-            <a href="{{ route('customer.newShowSearchForm') }}" class="w-full bg-indigo-300 text-black font-bold text-sm py-2 px-3 rounded-lg hover:bg-indigo-400 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:ring-opacity-50 challenge-btn mb-2 transition ease-in-out duration-150 block">
+            <a href="{{ route('customer.newShowSearchForm') }}" class="w-full bg-indigo-300 text-black font-bold 
+            text-1g flex justify-center items-center p-3 rounded-lg hover:bg-indigo-400 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:ring-opacity-50 challenge-btn mb-2 transition ease-in-out duration-150 block">
                 2- Beyond Basic
             </a>
 
-            <a href="{{ route('blind.form') }}" class="w-full bg-indigo-300 text-black font-bold text-sm py-2 px-3 rounded-lg hover:bg-indigo-400 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:ring-opacity-50 challenge-btn mb-2 transition ease-in-out duration-150 block">
+            <a href="{{ route('blind.form') }}" class="w-full bg-indigo-300 text-black font-bold 
+            text-1g flex justify-center items-center p-3 rounded-lg hover:bg-indigo-400 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:ring-opacity-50 challenge-btn mb-2 transition ease-in-out duration-150 block">
                 3- Blind SQL
             </a>
-            <a href="{{ route('vulnerable.login') }}" class="w-full bg-indigo-300 text-black font-bold text-sm py-2 px-3 rounded-lg hover:bg-indigo-400 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:ring-opacity-50 challenge-btn mb-2 transition ease-in-out duration-150 block">
+            <a href="{{ route('vulnerable.login') }}" class="w-full bg-indigo-300 text-black font-bold 
+            text-1g flex justify-center items-center p-3 rounded-lg hover:bg-indigo-400 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:ring-opacity-50 challenge-btn mb-2 transition ease-in-out duration-150 block">
                 4- SQL Injection
             </a>
           

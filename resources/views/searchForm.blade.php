@@ -4,11 +4,15 @@
 <div class="flex justify-center items-start space-x-4 p-6">
 
     <div class="w-1/3 rounded-lg shadow-md p-4">
-        <x-sql-basic-menu>1- Basic SQL</x-sql-basic-menu>
-    </div>
+        
+        <div class="m-2 flex items-center bg-indigo-200 hover:bg-indigo-300 rounded-xl p-2 border border-blue-700 transition duration-200 ease-in-out transform hover:scale-105">
+            <a href="{{ route('sql.injections') }}" class="text-gray-700 font-semibold text-lg font-mono flex items-center pl-8">
+                <span class="text-2xl mr-2">&#8592;</span> <!-- Big back sign -->
+                SQL Intro & Menu
+            </a>
+        </div>
 
-    <div class="w-2/3 bg-gray-200 rounded-xl shadow-lg p-6 space-y-4">
-        <form method="POST" action="{{ route('customer.search') }}" class="space-y-4 bg-white p-4 rounded-lg">
+        <form method="POST" action="{{ route('customer.search') }}" class="space-y-4 space-y-4 bg-gray-200 p-4 rounded-lg font-mono border border-blue-700">
             @csrf
             <div>
                 <label for="id" class="block text-lg font-mono font-bold text-gray-700">Enter Customer ID:</label>
@@ -20,6 +24,11 @@
                 <input type="submit" value="Search" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
             </div>
         </form>
+    </div>
+
+    <div class="w-2/3 bg-gray-200 rounded-xl shadow-lg p-6 space-y-4">
+
+
 
         <p class="mb-2 text-lg">Basic SQL Injection:</p>
         <div class="bg-white p-4 rounded-lg font-mono">

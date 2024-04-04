@@ -1,4 +1,4 @@
-<div class="p-2 m-1 rounded-lg shadow bg-gray-100 border border-blue-900 font-mono">
+<div class="p-2 m-1 rounded-lg shadow bg-gray-100  font-mono">
     <div class="text-xs mb-2 bg-white p-2 rounded-xl">
         <p class="text-gray-600 p-2 font-bold text-lg font-mono ">
             Welcome back, <span class="text-red-600">{{ Auth::user()->name }}</span>, to SQL Injection (SQLi) vulnerability.

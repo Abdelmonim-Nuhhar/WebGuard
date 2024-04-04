@@ -5,7 +5,7 @@
    
     <div class="w-1/2 bg-gray-200 rounded-xl shadow-lg p-3 font-mono ">
         <div class="m-2 flex items-center bg-indigo-200 hover:bg-indigo-300 rounded-xl p-2 border border-blue-700 transition duration-200 ease-in-out transform hover:scale-105">
-            <a href="{{ route('xss') }}" class="text-gray-700 font-semibold text-lg font-mono flex items-center pl-8">
+            <a href="{{ route('sql.injections') }}" class="text-gray-700 font-semibold text-lg font-mono flex items-center pl-8">
                 <span class="text-2xl mr-2">&#8592;</span> <!-- Big back sign -->
                 XSS Types Menu
             </a>
