@@ -7,7 +7,7 @@
     <div class="w-1/3 bg-white rounded-2xl mr-4 shadow-md p-4">
         <section class="bg-white rounded-xl">
             <div class="bg-blue-100 p-4 rounded-lg">
-                @php $counter = 0 @endphp
+              
                 @foreach($vulnerabilities as $vulnerability)
                     <!-- Check user permissions for vulnerability edit -->
                     @can('create', App\Models\Vulnerability::class)
@@ -30,16 +30,17 @@
                             </div>
                         </div>
                     @else
-                        <!-- Display for non-editable users -->
+                        <!-- Display for learner users -->
+                        
                         <div class="mb-4 last:mb-0 p-2 bg-indigo-200  hover:bg-indigo-300 rounded-xl border border-blue-700 transition duration-200 ease-in-out transform hover:scale-105">
                             <div class="flex justify-center items-center p-3">
                                 <a href="{{ route('index') . '/' . $vulnerability->id }}" class="text-gray-900 hover:text-blue-900 font-medium text-1g font-mono font-bold">
-                                    {{ $vulnerability->name }}
+                                    {{ $vulnerability->name }} 
                                 </a>
                             </div>
                         </div>
                     @endcan
-                    @php $counter++ @endphp
+              
                 @endforeach
             </div>
         </section>

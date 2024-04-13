@@ -51,9 +51,7 @@
         <div class="text-lg mb-1 bg-white p-2 rounded-2xl">
             <p>
                 Objective: At this level, the session ID value should be entirely unpredictable.
-                However, feel free to attempt to crack it. Despite its apparent randomness, 
-                understanding the factors influencing its generation provides valuable insights into strengthening
-                session security.
+               
             </p>
         </div>
     </div>

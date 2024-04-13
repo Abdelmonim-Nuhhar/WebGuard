@@ -17,11 +17,11 @@
 
 <body class="flex flex-col min-h-screen bg-gray-100 font-sans">
 
-    <header class="border-b border-blue-500 border-gray-300 p-2 shadow-md bg-gray-800 rounded">
+    <header class="border-b border-blue-500 border-gray-300 p-4 shadow-md bg-gray-800 rounded">
         <div class="flex justify-between items-center">
             <div class="flex items-center">
                 <img src="{{ asset('images/LBU.png') }}" alt="logo" class="h-20 w-auto">
-                <h2 class="text-white p-2 font-bold text-2xl font-mono pl-8 font-italic">Web Guard</h2>
+                <h2 class="text-white p-2 font-bold text-2xl font-mono pl-4 font-italic">Web Guard</h2>
             </div>
             <div class="space-x-2">
                 @auth
@@ -44,7 +44,7 @@
     </main>
 
     <footer class="bg-gray-800 text-white text-center p-4">
-        <h2 class="text-white p-2 font-bold text-xl font-mono pl-8 font-italic">&copy; {{ date('Y') }} Web Guard Vulnerabilities. All rights reserved.</h2>
+        <h2 class="text-white font-bold text-lg font-mono italic">&copy; {{ date('Y') }} Web Guard Vulnerabilities. All rights reserved.</h2>
     </footer>
     @stack('scripts')
 </body>

@@ -26,10 +26,10 @@ $_SESSION['password'] = 'password';
             To obtain the flag for this lesson, you must log in using the default admin credentials, which have never been changed or updated. Please proceed to log in to get the flag:
         </p>
         
-        <form method="post" action="{{ url('/vulnerabilities/4') }}" class="mt-4 p-4 bg-gray-200 rounded-2xl">
+        <form method="post" action="{{ url('/vulnerabilities/1') }}" class="mt-4 p-4 bg-gray-200 rounded-2xl">
             @csrf <!-- CSRF token for security -->
             <label for="username" class="block">Username:</label>
-            <input type="text" name="username" class="border rounded-lg px-3 py-1 mb-2"><br>
+            <input type="text" value="{{ old('username') }}" name="username" class="border rounded-lg px-3 py-1 mb-2"><br>
         
             <label for="password" class="block">Password:</label>
             <input type="password" name="password" class="border rounded-lg px-3 py-1 mb-2"><br>

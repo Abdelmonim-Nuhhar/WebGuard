@@ -72,13 +72,19 @@
     </style>
 </head>
 <body>
-    <h1 style="text-align: center;">Website Security and Vulnerabilities News</h1>
+    <h1 class=""></h1>
+    <div class="m-2 flex items-center bg-indigo-200 hover:bg-indigo-300 rounded-xl p-4 border border-blue-700 transition duration-200 ease-in-out transform hover:scale-105">
+            <a href="" class="text-yellow-700 font-semibold text-xl font-mono flex items-center ">
+                <span class="text-2xl mr-2 "></span> <!-- Big back sign -->
+                Website Security and Vulnerabilities News
+            </a>
+        </div>
     <div class="news-container">
         @foreach($news as $article)
             @php
                 $imageUrl = $article['image']['thumbnail']['contentUrl'] ?? null;
             @endphp
-            <div class="news-article" style="background-image: url('{{ $imageUrl }}');">
+            <div class="news-article p-2 " style="background-image: url('{{ $imageUrl }}');">
                 <h2>{{ $article['name'] }}</h2>
                 <p>{{ $article['description'] }}</p>
                 <a href="{{ $article['url'] }}" target="_blank">Read more</a>

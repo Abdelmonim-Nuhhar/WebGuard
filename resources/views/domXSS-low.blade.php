@@ -85,7 +85,7 @@ function performSearch() {
     resultsDiv.appendChild(resultsLabel);
 
     // Check if searchTerm contains JavaScript to execute
-    if (searchTerm.includes('javascript:alert()')) {
+    if (searchTerm.includes('javascript:')) {
         var scriptToExecute = searchTerm.split('javascript:')[1];
         try {
             // Execute the JavaScript code

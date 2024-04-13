@@ -35,7 +35,7 @@
         <div class="m-2 rounded-lg bg-indigo-400 border-indigo-300 hover:bg-indigo-300 p-1 mb-4 transition duration-300 ease-in-out 
         flex justify-center items-center transform hover:-translate-y-0.5 hover:scale-105 shadow">
             <button id="toggleSqlBasicButton" class="w-full text-black font-bold text-lg py-2 px-3 rounded-lg p-2 mb-1 challenge-btn">
-               Challenges Menu
+            Security Levels of SQL Injection 
             </button>
             <button id="basicBtnStatus" class="text-xs ml-1 text-gray-700"></button>
         </div>
