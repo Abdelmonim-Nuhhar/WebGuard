@@ -15,7 +15,7 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         $users= [
-            ['name' => 'Anas', 'email' => 'anas@anas.com','password' => '1234', 'is_admin'=>false],
+            ['name' => 'Anas', 'email' => 'anas@anas.com','password' => '1234', 'is_admin'=>true],
             ['name' => 'Abdel', 'email' => 'abdel@abdel.com','password' => '1234', 'is_admin'=>true],           
         ];
 
@@ -27,5 +27,9 @@ class UserSeeder extends Seeder
                 'is_admin' => $user['is_admin'],
             ]);
         }
+
+        User::factory()->count(1000)->create();
+
+
     }
 }
